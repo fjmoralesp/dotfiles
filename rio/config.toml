@@ -1,0 +1,13 @@
+line-height = 2
+theme = "catppuccin-mocha"
+option-as-alt = 'left'
+
+[fonts]
+size = 22
+family = "FiraCode Nerd Font"
+
+[platform]
+windows.shell.program = "wsl"
+
+[renderer]
+backend = "Automatic"
