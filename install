@@ -7,3 +7,5 @@ ln -s $DOTFILES/nvim $HOME/.config/nvim
 
 rm -rf $HOME/.config/rio
 ln -s $DOTFILES/rio $HOME/.config/rio
+
+ln -sf $DOTFILES/tmux/tmux.conf $HOME/.tmux.conf
