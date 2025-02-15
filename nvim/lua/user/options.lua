@@ -16,7 +16,7 @@ vim.opt.termguicolors = true
 
 vim.opt.clipboard = 'unnamedplus' -- Use system clipboard
 
-vim.opt.spell = true
+vim.opt.spell = false
 
 vim.opt.ignorecase = true
 
@@ -32,5 +32,5 @@ vim.opt.backupdir:remove('.')
 
 vim.opt.showmode = false
 
-vim.opt.signcolumn ='yes:1'
+vim.opt.signcolumn ='yes:2'
 vim.opt.completeopt = 'noinsert,popup'

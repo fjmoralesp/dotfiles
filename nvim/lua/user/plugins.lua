@@ -214,17 +214,29 @@ use({
 
 -- Copilot
 use({
-  'github/copilot.vim',
-  requires = {
-    'nvim-lua/plenary.nvim',
-    'nvim-treesitter/nvim-treesitter',
-  },
+  'zbirenbaum/copilot.lua',
+  cmd = 'Copilot',
+  event = 'InsertEnter',
+  config = function()
+    require('copilot').setup({
+      suggestion = { enabled = false },
+      panel = { enabled = false },
+    })
+  end,
+})
+
+use({
+  'zbirenbaum/copilot-cmp',
+  after = { 'copilot.lua' },
+  config = function()
+    require('copilot_cmp').setup()
+  end,
 })
 
 use({
   'CopilotC-Nvim/CopilotChat.nvim',
   requires = {
-    'github/copilot.vim',
+    'zbirenbaum/copilot.lua',
     'nvim-lua/plenary.nvim',
   },
   config = function ()
@@ -241,7 +253,6 @@ use({
     'hrsh7th/cmp-nvim-lsp-signature-help',
     'hrsh7th/cmp-buffer',
     'hrsh7th/cmp-path',
-    'hrsh7th/cmp-copilot',
     'L3MON4D3/LuaSnip',
     'saadparwaiz1/cmp_luasnip',
     'onsails/lspkind-nvim',
@@ -262,6 +273,9 @@ use({
     require('user/plugins_opt/dap')
   end
 })
+
+-- Tmux
+use('christoomey/vim-tmux-navigator')
 
 -- Automatically set up your configuration after cloning packer.nvim
 -- Put this at the end after all plugins
