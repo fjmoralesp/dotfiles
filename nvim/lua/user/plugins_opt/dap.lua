@@ -22,8 +22,8 @@ dap.configurations.kotlin = {
 require('dapui').setup()
 
 -- Keymaps
-vim.keymap.set('n', '<leader>gu', [[<cmd>lua require('dapui').toggle()<CR>]])
-vim.keymap.set('n', '<leader>gb', [[<cmd>lua require('dap').toggle_breakpoint()<CR>]])
-vim.keymap.set('n', '<leader>gs', [[<cmd>lua require('dap').continue()<CR>]])
-vim.keymap.set('n', '<leader>go', [[<cmd>lua require('dap').step_over()<CR>]])
-vim.keymap.set('n', '<leader>gi', [[<cmd>lua require('dap').step_into()<CR>]])
+vim.keymap.set('n', '<A-8>', [[<cmd>lua require('dapui').toggle()<CR>]])
+vim.keymap.set('n', '<A-9>', [[<cmd>lua require('dap').toggle_breakpoint()<CR>]])
+vim.keymap.set('n', '<A-0>', [[<cmd>lua require('dap').continue()<CR>]])
+vim.keymap.set('n', '<A-->', [[<cmd>lua require('dap').step_over()<CR>]])
+vim.keymap.set('n', '<A-=>', [[<cmd>lua require('dap').step_into()<CR>]])
