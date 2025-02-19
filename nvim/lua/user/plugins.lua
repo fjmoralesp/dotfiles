@@ -21,7 +21,7 @@ require('packer').init({
   },
 })
 
-local use = require('packer').use 
+local use = require('packer').use
 
 -- Packer can manage itself.
 use('wbthomason/packer.nvim')
@@ -42,6 +42,24 @@ use({
   end,
 })
 
+use({
+  'NeogitOrg/neogit',
+  requires = {
+    'nvim-lua/plenary.nvim',
+    'sindrets/diffview.nvim',
+    'nvim-telescope/telescope.nvim',
+  },
+  config = function()
+    require('neogit').setup({
+      integrations = {
+        telescope = true,
+        diffview = true,
+      }
+    })
+    vim.keymap.set('n', '<A-2>', ':Neogit<CR>')
+  end,
+})
+
 -- Theme and other visual plugins.
 use({
   'catppuccin/nvim',
@@ -55,6 +73,9 @@ use({
           neotree = true,
           treesitter = true,
           rainbow_delimiters = true,
+          gitsigns = true,
+          mason = true,
+          neogit = true,
         }
       })
     vim.cmd('colorscheme catppuccin-mocha')
