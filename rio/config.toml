@@ -11,3 +11,6 @@ windows.shell.program = "wsl"
 
 [renderer]
 backend = "Automatic"
+
+[window]
+mode = "Fullscreen"
