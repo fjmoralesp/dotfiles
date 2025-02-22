@@ -19,23 +19,6 @@ require('lspconfig').kotlin_language_server.setup({
   }
 })
 
--- Java
-require('lspconfig').jdtls.setup({
-  capabilities = capabilities,
-  settings = {
-    java = {
-      configuration = {
-        runtimes = {
-          {
-            name = 'JavaSE-1.8',
-            path = '/usr/lib/jvm/zulu-8-amd64',
-          }
-        }
-      }
-    }
-  },
-})
-
 -- Lint
 require('null-ls').setup({
   sources = {
