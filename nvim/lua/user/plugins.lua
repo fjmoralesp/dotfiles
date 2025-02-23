@@ -298,6 +298,14 @@ use({
 -- Tmux
 use('christoomey/vim-tmux-navigator')
 
+-- Java
+use({
+  'mfussenegger/nvim-jdtls',
+  requires = {
+    'nvim-dap',
+  }
+})
+
 -- Automatically set up your configuration after cloning packer.nvim
 -- Put this at the end after all plugins
 if packer_bootstrap then

@@ -19,7 +19,58 @@ dap.configurations.kotlin = {
   },
 }
 
-require('dapui').setup()
+dap.configurations.java = {
+  {
+    type = 'java',
+    request = 'attach',
+    name = 'Java DAP',
+    port = 8089,
+    args = {},
+    hostName = 'localhost',
+    timeout = 10000,
+  },
+}
+
+require('dapui').setup({
+  layouts = {
+    {
+      elements = {
+        {
+          id = "scopes",
+          size = 0.52
+        },
+        {
+          id = "breakpoints",
+          size = 0.16
+        },
+        {
+          id = "stacks",
+          size = 0.16
+        },
+        {
+          id = "watches",
+          size = 0.16
+        }
+      },
+      position = "left",
+      size = 70
+    },
+    {
+      elements = {
+        {
+          id = "repl",
+          size = 0.5
+        },
+        {
+          id = "console",
+          size = 0.5
+        }
+      },
+      position = "right",
+      size = 50
+    }
+  },
+})
 
 -- Keymaps
 vim.keymap.set('n', '<A-8>', [[<cmd>lua require('dapui').toggle()<CR>]])
