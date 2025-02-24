@@ -306,6 +306,19 @@ use({
   }
 })
 
+-- DB manager
+use({
+  'kristijanhusak/vim-dadbod-ui',
+  requires = {
+    'tpope/vim-dadbod',
+    'kristijanhusak/vim-dadbod-completion',
+  },
+  config = function()
+    vim.g.db_ui_use_nerd_fonts = 1
+    vim.keymap.set('n', '<A-3>', ':DBUIToggle<CR>')
+  end,
+})
+
 -- Automatically set up your configuration after cloning packer.nvim
 -- Put this at the end after all plugins
 if packer_bootstrap then
