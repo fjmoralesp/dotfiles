@@ -1,4 +1,5 @@
 local dap = require('dap')
+local home = os.getenv('HOME')
 
 dap.adapters.kotlin = {
   type = 'executable',
@@ -31,42 +32,86 @@ dap.configurations.java = {
   },
 }
 
+require('dap').adapters['pwa-node'] = {
+  type = 'server',
+  host = 'localhost',
+  port = '${port}',
+  executable = {
+    command = 'node',
+    args = {home .. '/js-debug-dap/src/dapDebugServer.js', '${port}'},
+  }
+}
+
+require('dap').configurations.javascript = {
+  {
+    type = 'pwa-node',
+    request = 'launch',
+    name = 'Launch App',
+    program = '${file}',
+    cwd = '${workspaceFolder}',
+    console = 'integratedTerminal',
+  },
+  {
+    type = 'pwa-node',
+    request = 'launch',
+    name = 'Tests using react-scripts',
+    runtimeExecutable = 'npx',
+    runtimeArgs = {'react-scripts', 'test', '--runInBand'},
+    cwd = '${workspaceFolder}',
+    console = 'integratedTerminal',
+    internalConsoleOptions = 'neverOpen',
+  },
+}
+
+require('dap').configurations.typescriptreact = {
+  {
+    type = 'pwa-node',
+    request = 'launch',
+    name = 'Tests using Vitest',
+    runtimeExecutable = 'npx',
+    runtimeArgs = {'vitest', 'run'},
+    cwd = '${workspaceFolder}',
+    console = 'integratedTerminal',
+    internalConsoleOptions = 'neverOpen',
+  },
+}
+
 require('dapui').setup({
   layouts = {
     {
       elements = {
         {
-          id = "scopes",
+          id = 'scopes',
           size = 0.52
         },
         {
-          id = "breakpoints",
+          id = 'breakpoints',
           size = 0.16
         },
         {
-          id = "stacks",
+          id = 'stacks',
           size = 0.16
         },
         {
-          id = "watches",
+          id = 'watches',
           size = 0.16
         }
       },
-      position = "left",
+      position = 'left',
       size = 70
     },
     {
       elements = {
         {
-          id = "repl",
+          id = 'repl',
           size = 0.5
         },
         {
-          id = "console",
+          id = 'console',
           size = 0.5
         }
       },
-      position = "right",
+      position = 'right',
       size = 50
     }
   },
