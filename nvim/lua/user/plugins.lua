@@ -114,6 +114,17 @@ use({
   end,
 })
 
+use({
+  'AckslD/nvim-neoclip.lua',
+  requires = {
+    'nvim-telescope/telescope.nvim',
+  },
+  config = function()
+    require('neoclip').setup()
+    vim.keymap.set('n', '<C-p>', ':Telescope neoclip<CR>')
+  end,
+})
+
 -- File tree sidebar
 use({
   'nvim-neo-tree/neo-tree.nvim',
