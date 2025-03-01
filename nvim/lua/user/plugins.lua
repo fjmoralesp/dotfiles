@@ -91,7 +91,16 @@ use({
   config = function()
     require('lualine').setup({
       options = {
-        theme = 'catppuccin-mocha'
+        theme = 'catppuccin-mocha',
+        sections = {
+          lualine_c = {
+            {
+              'filename',
+              path = 3,
+              shorting_target = 40,
+            }
+          },
+        }
       }
     })
   end,
