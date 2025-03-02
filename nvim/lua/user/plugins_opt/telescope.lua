@@ -29,7 +29,7 @@ require('telescope').setup({
 require('telescope').load_extension('live_grep_args')
 require('telescope').load_extension('fzf')
 
-vim.keymap.set('n', '<leader>f', [[<cmd>lua require('telescope.builtin').live_grep()<CR>]])
+vim.keymap.set('n', '<leader>f', [[<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>]])
 vim.keymap.set('n', '<leader>b', [[<cmd>lua require('telescope.builtin').buffers()<CR>]])
 vim.keymap.set('n', '<C-f>', [[<cmd>lua require('telescope.builtin').find_files({ no_ignore = true })<CR>]])
 vim.keymap.set('n', '<leader>D', ':Telescope diagnostics<CR>')
