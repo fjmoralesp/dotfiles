@@ -92,7 +92,34 @@ use({
     require('lualine').setup({
       options = {
         theme = 'catppuccin-mocha',
-      }
+      },
+      sections = {
+        lualine_c = {
+          {
+            'filename',
+            path = 1,
+            shorting_target = 40,
+          },
+        },
+        lualine_x = {
+          function()
+            local ok, pomo = pcall(require, 'pomo')
+            if not ok then
+              return ''
+            end
+
+            local timer = pomo.get_first_to_finish()
+            if timer == nil then
+              return ''
+            end
+
+            return '󰄉 ' .. tostring(timer)
+          end,
+          'encoding',
+          'fileformat',
+          'filetype',
+        },
+      },
     })
   end,
 })
@@ -327,6 +354,17 @@ use({
   config = function()
     vim.g.db_ui_use_nerd_fonts = 1
     vim.keymap.set('n', '<A-3>', ':DBUIToggle<CR>')
+  end,
+})
+
+-- Focus
+use({
+  'epwalsh/pomo.nvim',
+  requires = {
+    'rcarriga/nvim-notify',
+  },
+  config = function()
+    require('user/plugins_opt/timers')
   end,
 })
 

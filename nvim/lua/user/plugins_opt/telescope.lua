@@ -28,8 +28,13 @@ require('telescope').setup({
 
 require('telescope').load_extension('live_grep_args')
 require('telescope').load_extension('fzf')
+require('telescope').load_extension('pomodori')
 
 vim.keymap.set('n', '<leader>f', [[<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>]])
 vim.keymap.set('n', '<leader>b', [[<cmd>lua require('telescope.builtin').buffers()<CR>]])
 vim.keymap.set('n', '<C-f>', [[<cmd>lua require('telescope.builtin').find_files({ no_ignore = true })<CR>]])
 vim.keymap.set('n', '<leader>D', ':Telescope diagnostics<CR>')
+
+vim.keymap.set('n', '<leader>t', function()
+  require('telescope').extensions.pomodori.timers()
+end, { desc = 'Manage Pomodori Timers'})
