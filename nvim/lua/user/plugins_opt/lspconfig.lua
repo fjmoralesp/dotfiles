@@ -11,6 +11,9 @@ require('lspconfig').lua_ls.setup({ capabilities = capabilities })
 -- Typescript, Javascript
 require('lspconfig').vtsls.setup({ capabilities = capabilities })
 
+-- Tailwind
+require('lspconfig').tailwindcss.setup({ capabilities = capabilities })
+
 -- Kotlin
 require('lspconfig').kotlin_language_server.setup({
   capabilities = capabilities,
