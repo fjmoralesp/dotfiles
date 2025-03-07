@@ -195,8 +195,9 @@ use('tpope/vim-sleuth')
 -- Add more languages.
 use('sheerun/vim-polyglot')
 
--- Enable * searching with visually selected text.
-use('nelstrom/vim-visual-star-search')
+-- Improve search.
+use('nelstrom/vim-visual-star-search') -- Enable * searching with visually selected text.
+use('mg979/vim-visual-multi') -- Multiline cursor.
 
 -- Automatically add closing brackets, quotes, etc.
 use({
