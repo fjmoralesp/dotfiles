@@ -16,7 +16,7 @@ vim.opt.termguicolors = true
 
 vim.opt.clipboard = 'unnamedplus' -- Use system clipboard
 
-vim.opt.spell = false -- Remove spelling
+vim.opt.spell = true
 
 vim.opt.ignorecase = true
 
