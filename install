@@ -8,6 +8,9 @@ ln -s $DOTFILES/nvim $HOME/.config/nvim
 rm -rf $HOME/.config/rio
 ln -s $DOTFILES/rio $HOME/.config/rio
 
+rm -rf $HOME/.config/kitty
+ln -s $DOTFILES/kitty $HOME/.config/kitty
+
 ln -sf $DOTFILES/tmux/tmux.conf $HOME/.tmux.conf
 
 ln -sf $DOTFILES/starship/starship.toml $HOME/.config/starship.toml
