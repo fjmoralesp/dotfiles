@@ -4,7 +4,7 @@ local workspace_dir = home .. '/.cache/jdtls-workspace/' .. project_name
 
 local config = {
     cmd = {
-        home .. '/.jre/zulu21/bin/java',
+        home .. '/.jvm/zulu21/bin/java',
         '-Declipse.application=org.eclipse.jdt.ls.core.id1',
         '-Dosgi.bundles.defaultStartLevel=4',
         '-Declipse.product=org.eclipse.jdt.ls.core.product',
@@ -14,7 +14,7 @@ local config = {
         '--add-modules=ALL-SYSTEM',
         '--add-opens', 'java.base/java.util=ALL-UNNAMED',
         '--add-opens', 'java.base/java.lang=ALL-UNNAMED',
-        '-jar', home .. '/jdt-language-server/plugins/org.eclipse.equinox.launcher_1.6.900.v20240613-2009.jar',
+        '-jar', home .. '/jdt-language-server/plugins/org.eclipse.equinox.launcher_1.6.1000.v20250227-1734.jar',
         '-configuration', home .. '/jdt-language-server/config_linux',
         '-data', workspace_dir
     },
@@ -25,7 +25,7 @@ local config = {
                 runtimes = {
                     {
                         name = 'JavaSE-1.8',
-                        path = '/usr/lib/jvm/zulu-8-amd64',
+                        path = home .. '/.jvm/zulu8',
                         default = true,
                     },
                 },
