@@ -78,6 +78,7 @@ use({
           neogit = true,
         }
       })
+    -- vim.cmd('colorscheme catppuccin-latte')
     vim.cmd('colorscheme catppuccin-mocha')
   end,
 })
@@ -91,6 +92,7 @@ use({
   config = function()
     require('lualine').setup({
       options = {
+        -- theme = 'catppuccin-latte',
         theme = 'catppuccin-mocha',
       },
       sections = {
