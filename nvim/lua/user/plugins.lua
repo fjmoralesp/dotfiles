@@ -258,8 +258,6 @@ use({
   requires = {
     'williamboman/mason.nvim',
     'williamboman/mason-lspconfig.nvim',
-    'jose-elias-alvarez/null-ls.nvim',
-    'jayp0521/mason-null-ls.nvim',
   },
   config = function()
     require('user/plugins_opt/lspconfig')
