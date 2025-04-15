@@ -305,6 +305,26 @@ use({
   end
 })
 
+use({
+  'yetone/avante.nvim',
+  requires = {
+    'nvim-treesitter/nvim-treesitter',
+    'stevearc/dressing.nvim',
+    'nvim-lua/plenary.nvim',
+    'MunifTanjim/nui.nvim',
+    'MeanderingProgrammer/render-markdown.nvim',
+    'hrsh7th/nvim-cmp',
+    'nvim-tree/nvim-web-devicons' ,
+    'HakonHarnes/img-clip.nvim',
+    'zbirenbaum/copilot.lua',
+  },
+  branch = 'main',
+  run = 'make',
+  config = function()
+    require('user/plugins_opt/avante')
+  end
+})
+
 -- Completition
 use({
   'hrsh7th/nvim-cmp',
