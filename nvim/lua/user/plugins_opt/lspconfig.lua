@@ -22,6 +22,9 @@ require('lspconfig').kotlin_language_server.setup({
   }
 })
 
+-- Python
+vim.lsp.enable('pyright')
+
 -- Keymaps
 vim.keymap.set('n', '<leader>d', '<cmd>lua vim.diagnostic.open_float()<CR>')
 vim.keymap.set('n', 'gd', ':Telescope lsp_definitions<CR>')
