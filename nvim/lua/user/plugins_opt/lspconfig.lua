@@ -23,7 +23,7 @@ require('lspconfig').kotlin_language_server.setup({
 })
 
 -- Python
-vim.lsp.enable('pyright')
+require('lspconfig').pyright.setup({ capabilities = capabilities })
 
 -- Keymaps
 vim.keymap.set('n', '<leader>d', '<cmd>lua vim.diagnostic.open_float()<CR>')
