@@ -63,6 +63,27 @@ require('dap').configurations.javascript = {
   },
 }
 
+require('dap').configurations.typescript = {
+  {
+    type = 'pwa-node',
+    request = 'launch',
+    name = 'Launch TypeScript App',
+    program = '${file}',
+    cwd = '${workspaceFolder}',
+    console = 'integratedTerminal',
+  },
+  {
+    type = 'pwa-node',
+    request = 'launch',
+    name = 'TypeScript Tests using react-scripts',
+    runtimeExecutable = 'npx',
+    runtimeArgs = {'react-scripts', 'test', '--runInBand'},
+    cwd = '${workspaceFolder}',
+    console = 'integratedTerminal',
+    internalConsoleOptions = 'neverOpen',
+  },
+}
+
 require('dap').configurations.typescriptreact = {
   {
     type = 'pwa-node',
