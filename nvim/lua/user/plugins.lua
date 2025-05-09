@@ -154,6 +154,7 @@ use({
   end,
 })
 
+-- Motions
 use({
   'folke/flash.nvim',
   config = function()
@@ -164,6 +165,16 @@ use({
     vim.keymap.set('o', 'r', function() require('flash').remote() end, { desc = 'Remote Flash' })
     vim.keymap.set({ 'o', 'x' }, 'R', function() require('flash').treesitter_search() end, { desc = 'Treesitter Search' })
     vim.keymap.set('c', '<c-s>', function() require('flash').toggle() end, { desc = 'Toggle Flash Search' })
+  end,
+})
+
+use({
+  'm4xshen/hardtime.nvim',
+  requires = {
+    'MunifTanjim/nui.nvim',
+  },
+  config = function()
+    require('hardtime').setup()
   end,
 })
 
