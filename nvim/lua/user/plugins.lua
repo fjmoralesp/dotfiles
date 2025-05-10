@@ -137,6 +137,7 @@ use({
     'kyazdani42/nvim-web-devicons',
     'nvim-telescope/telescope-live-grep-args.nvim',
     { 'nvim-telescope/telescope-fzf-native.nvim', run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release' },
+    'OliverChao/telescope-picker-list.nvim',
   },
   config = function()
     require('user/plugins_opt/telescope')
@@ -150,7 +151,7 @@ use({
   },
   config = function()
     require('neoclip').setup()
-    vim.keymap.set('n', '<C-p>', ':Telescope neoclip<CR>')
+    vim.keymap.set('n', '<leader>tp', ':Telescope neoclip<CR>')
   end,
 })
 
@@ -159,12 +160,12 @@ use({
   'folke/flash.nvim',
   config = function()
     require('flash').setup()
+    require('flash').toggle(true)
     -- Key mappings
     vim.keymap.set({ 'n', 'x', 'o' }, 's', function() require('flash').jump() end, { desc = 'Flash' })
     vim.keymap.set({ 'n', 'x', 'o' }, 'S', function() require('flash').treesitter() end, { desc = 'Flash Treesitter' })
     vim.keymap.set('o', 'r', function() require('flash').remote() end, { desc = 'Remote Flash' })
     vim.keymap.set({ 'o', 'x' }, 'R', function() require('flash').treesitter_search() end, { desc = 'Treesitter Search' })
-    vim.keymap.set('c', '<c-s>', function() require('flash').toggle() end, { desc = 'Toggle Flash Search' })
   end,
 })
 

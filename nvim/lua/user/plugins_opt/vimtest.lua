@@ -1,3 +1,3 @@
-vim.keymap.set('n', '<leader>tn', ':TestNearest<CR>')
-vim.keymap.set('n', '<leader>tf', ':TestFile<CR>')
-vim.keymap.set('n', '<leader>ts', ':TestSuite<CR>')
+vim.keymap.set('n', '<leader>rn', ':TestNearest<CR>')
+vim.keymap.set('n', '<leader>rf', ':TestFile<CR>')
+vim.keymap.set('n', '<leader>rs', ':TestSuite<CR>')
