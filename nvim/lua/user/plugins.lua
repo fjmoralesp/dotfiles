@@ -60,6 +60,20 @@ use({
   end,
 })
 
+use({
+  'almo7aya/openingh.nvim',
+  config = function()
+    require('openingh').setup()
+
+    -- for repository page
+    vim.keymap.set('n', '<Leader>gr', ':OpenInGHRepo<CR>')
+
+    -- for current file page
+    vim.keymap.set('n', '<Leader>gf', ':OpenInGHFile<CR>')
+    vim.keymap.set('v', '<Leader>gf', ':OpenInGHFileLines<CR>')
+  end,
+})
+
 -- Theme and other visual plugins.
 use({
   'catppuccin/nvim',
