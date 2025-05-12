@@ -1,6 +1,6 @@
 require('avante').setup({
   ---@alias Provider 'claude' | 'openai' | 'azure' | 'gemini' | 'cohere' | 'copilot' | string
-  provider = 'claude', -- The provider used in Aider mode or in the planning phase of Cursor Planning Mode
+  provider = 'copilot', -- The provider used in Aider mode or in the planning phase of Cursor Planning Mode
   ---@alias Mode 'agentic' | 'legacy'
   mode = 'agentic', -- The default mode for interaction. 'agentic' uses tools to automatically generate code, 'legacy' uses the old planning method to generate code.
   -- WARNING: Since auto-suggestions are a high-frequency operation and therefore expensive,
@@ -86,7 +86,8 @@ require('avante').setup({
     ---@type 'right' | 'left' | 'top' | 'bottom'
     position = 'right', -- the position of the sidebar
     wrap = true, -- similar to vim.o.wrap
-    width = 30, -- default % based on available width
+    width = 45, -- default % based on available width
+    height = 100,
     sidebar_header = {
       enabled = true, -- true, false to enable/disable the header
       align = 'center', -- left, center, right for title
