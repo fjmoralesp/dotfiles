@@ -183,16 +183,6 @@ use({
   end,
 })
 
-use({
-  'm4xshen/hardtime.nvim',
-  requires = {
-    'MunifTanjim/nui.nvim',
-  },
-  config = function()
-    require('hardtime').setup()
-  end,
-})
-
 -- File tree sidebar
 use({
   'nvim-neo-tree/neo-tree.nvim',
