@@ -1,6 +1,6 @@
 require('avante').setup({
   ---@alias Provider 'claude' | 'openai' | 'azure' | 'gemini' | 'cohere' | 'copilot' | string
-  provider = 'copilot', -- The provider used in Aider mode or in the planning phase of Cursor Planning Mode
+  provider = 'claude', -- The provider used in Aider mode or in the planning phase of Cursor Planning Mode
   ---@alias Mode 'agentic' | 'legacy'
   mode = 'agentic', -- The default mode for interaction. 'agentic' uses tools to automatically generate code, 'legacy' uses the old planning method to generate code.
   -- WARNING: Since auto-suggestions are a high-frequency operation and therefore expensive,
@@ -10,9 +10,10 @@ require('avante').setup({
   cursor_applying_provider = nil, -- The provider used in the applying phase of Cursor Planning Mode, defaults to nil, when nil uses Config.provider as the provider for the applying phase
   claude = {
     endpoint = 'https://api.anthropic.com',
-    model = 'claude-3-5-sonnet-20241022',
+    model = 'claude-3-7-sonnet-20250219',
+    timeout = 30000, -- Timeout in milliseconds
     temperature = 0,
-    max_tokens = 4096,
+    max_tokens = 20480,
   },
   ---Specify the special dual_boost mode
   ---1. enabled: Whether to enable dual_boost mode. Default to false.
