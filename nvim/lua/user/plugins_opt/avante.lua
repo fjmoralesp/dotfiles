@@ -1,6 +1,6 @@
 require('avante').setup({
   ---@alias Provider 'claude' | 'openai' | 'azure' | 'gemini' | 'cohere' | 'copilot' | string
-  provider = 'claude', -- The provider used in Aider mode or in the planning phase of Cursor Planning Mode
+  provider = 'copilot', -- The provider used in Aider mode or in the planning phase of Cursor Planning Mode
   ---@alias Mode 'agentic' | 'legacy'
   mode = 'agentic', -- The default mode for interaction. 'agentic' uses tools to automatically generate code, 'legacy' uses the old planning method to generate code.
   -- WARNING: Since auto-suggestions are a high-frequency operation and therefore expensive,
@@ -8,9 +8,11 @@ require('avante').setup({
   -- Of course, you can reduce the request frequency by increasing `suggestion.debounce`.
   auto_suggestions_provider = 'claude',
   cursor_applying_provider = nil, -- The provider used in the applying phase of Cursor Planning Mode, defaults to nil, when nil uses Config.provider as the provider for the applying phase
-  claude = {
-    endpoint = 'https://api.anthropic.com',
-    model = 'claude-3-7-sonnet-20250219',
+  copilot = {
+    endpoint = 'https://api.githubcopilot.com',
+    model = 'claude-3.7-sonnet',
+    proxy = nil, -- [protocol://]host[:port] Use this proxy
+    allow_insecure = false, -- Allow insecure server connections
     timeout = 30000, -- Timeout in milliseconds
     temperature = 0,
     max_tokens = 20480,

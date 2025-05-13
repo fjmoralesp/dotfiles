@@ -329,7 +329,9 @@ use({
     'nvim-lua/plenary.nvim',
   },
   config = function ()
-    require('CopilotChat').setup()
+    require('CopilotChat').setup({
+      model = 'claude-3.7-sonnet'
+    })
     vim.keymap.set('n', '<leader>c', ':CopilotChatToggle<CR>')
   end
 })
