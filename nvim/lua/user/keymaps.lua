@@ -17,4 +17,4 @@ vim.keymap.set('v', '<A-j>', ":move '>+1<CR>gv=gv")
 vim.keymap.set('v', '<A-k>', ":move '<-2<CR>gv=gv")
 
 -- Format Json
-vim.keymap.set('n', '<leader>j', ':%!jq .<CR>')
+vim.keymap.set('v', '<leader>j', ':%!jq .<CR>')
