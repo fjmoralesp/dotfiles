@@ -169,20 +169,6 @@ use({
   end,
 })
 
--- Motions
-use({
-  'folke/flash.nvim',
-  config = function()
-    require('flash').setup()
-    require('flash').toggle(true)
-    -- Key mappings
-    vim.keymap.set({ 'n', 'x', 'o' }, 's', function() require('flash').jump() end, { desc = 'Flash' })
-    vim.keymap.set({ 'n', 'x', 'o' }, 'S', function() require('flash').treesitter() end, { desc = 'Flash Treesitter' })
-    vim.keymap.set('o', 'r', function() require('flash').remote() end, { desc = 'Remote Flash' })
-    vim.keymap.set({ 'o', 'x' }, 'R', function() require('flash').treesitter_search() end, { desc = 'Treesitter Search' })
-  end,
-})
-
 -- File tree sidebar
 use({
   'nvim-neo-tree/neo-tree.nvim',
@@ -229,6 +215,18 @@ use('sheerun/vim-polyglot')
 -- Improve search.
 use('nelstrom/vim-visual-star-search') -- Enable * searching with visually selected text.
 use('mg979/vim-visual-multi') -- Multiline cursor.
+use({
+  'folke/flash.nvim',
+  config = function()
+    require('flash').setup()
+    require('flash').toggle(true)
+    -- Key mappings
+    vim.keymap.set({ 'n', 'x', 'o' }, 's', function() require('flash').jump() end, { desc = 'Flash' })
+    vim.keymap.set({ 'n', 'x', 'o' }, 'S', function() require('flash').treesitter() end, { desc = 'Flash Treesitter' })
+    vim.keymap.set('o', 'r', function() require('flash').remote() end, { desc = 'Remote Flash' })
+    vim.keymap.set({ 'o', 'x' }, 'R', function() require('flash').treesitter_search() end, { desc = 'Treesitter Search' })
+  end,
+})
 
 -- Automatically add closing brackets, quotes, etc.
 use({
@@ -348,10 +346,15 @@ use({
     'nvim-tree/nvim-web-devicons' ,
     'HakonHarnes/img-clip.nvim',
     'zbirenbaum/copilot.lua',
+    'echasnovski/mini.pick',
+    'nvim-telescope/telescope.nvim',
+    'ibhagwan/fzf-lua',
   },
-  branch = 'main',
   run = 'make',
   config = function()
+    require('render-markdown').setup({
+      file_types = { 'markdown', 'Avante' },
+    })
     require('user/plugins_opt/avante')
   end
 })
