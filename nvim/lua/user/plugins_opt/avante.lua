@@ -17,6 +17,13 @@ require('avante').setup({
     temperature = 0,
     max_tokens = 20480,
   },
+  claude = {
+    endpoint = 'https://api.anthropic.com',
+    model = 'claude-3-7-sonnet-20250219',
+    timeout = 30000, -- Timeout in milliseconds
+    temperature = 0,
+    max_tokens = 20480,
+  },
   ---Specify the special dual_boost mode
   ---1. enabled: Whether to enable dual_boost mode. Default to false.
   ---2. first_provider: The first provider to generate response. Default to 'openai'.
