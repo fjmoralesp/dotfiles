@@ -152,6 +152,7 @@ use({
     'nvim-telescope/telescope-live-grep-args.nvim',
     { 'nvim-telescope/telescope-fzf-native.nvim', run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release' },
     'OliverChao/telescope-picker-list.nvim',
+    'nvim-telescope/telescope-ui-select.nvim',
   },
   config = function()
     require('user/plugins_opt/telescope')
@@ -328,7 +329,8 @@ use({
   },
   config = function ()
     require('CopilotChat').setup({
-      model = 'claude-3.7-sonnet'
+      model = 'claude-3.7-sonnet',
+      context = 'buffers',
     })
     vim.keymap.set('n', '<leader>c', ':CopilotChatToggle<CR>')
   end

@@ -33,4 +33,4 @@ vim.opt.backupdir:remove('.')
 vim.opt.showmode = false
 
 vim.opt.signcolumn ='yes:2'
-vim.opt.completeopt = 'noinsert,popup'
+vim.opt.completeopt = 'popup'
