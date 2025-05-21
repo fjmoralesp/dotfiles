@@ -243,6 +243,19 @@ use({
   config = function()
     vim.g.splitjoin_html_attributes_bracket_on_new_line = 1
     vim.g.splitjoin_trailing_comma = 1
+    -- gS: split
+    -- gJ: join
+  end,
+})
+
+use({
+  'nicwest/vim-camelsnek',
+  config = function()
+    vim.keymap.set('v', 'gss', ':Snek<CR>')
+    vim.keymap.set('v', 'gsC', ':Camel<CR>')
+    vim.keymap.set('v', 'gsc', ':CamelB<CR>')
+    vim.keymap.set('v', 'gsk', ':Kebab<CR>')
+    vim.keymap.set('v', 'gsS', ':Screm<CR>')
   end,
 })
 
