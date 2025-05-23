@@ -19,10 +19,16 @@ require('avante').setup({
   },
   claude = {
     endpoint = 'https://api.anthropic.com',
-    model = 'claude-3-7-sonnet-20250219',
+    model = 'claude-sonnet-4-20250514',
     timeout = 30000, -- Timeout in milliseconds
     temperature = 0,
     max_tokens = 20480,
+  },
+  vendors = {
+    ['copilot-sonnet-4'] = {
+      __inherited_from = 'copilot',
+      model = 'claude-sonnet-4',
+    }
   },
   ---Specify the special dual_boost mode
   ---1. enabled: Whether to enable dual_boost mode. Default to false.

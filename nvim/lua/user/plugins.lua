@@ -342,7 +342,7 @@ use({
   },
   config = function ()
     require('CopilotChat').setup({
-      model = 'claude-3.7-sonnet',
+      model = 'claude-3.7-sonnet', -- claude-sonnet-4
       context = 'buffers',
     })
     vim.keymap.set('n', '<leader>c', ':CopilotChatToggle<CR>')
