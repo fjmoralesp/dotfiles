@@ -28,7 +28,6 @@ require('telescope').setup({
 
 require('telescope').load_extension('live_grep_args')
 require('telescope').load_extension('fzf')
-require('telescope').load_extension('pomodori')
 require('telescope').load_extension('ui-select')
 
 -- picker_list must be the last one
@@ -40,7 +39,3 @@ vim.keymap.set('n', '<leader>tf', [[<cmd>lua require('telescope.builtin').find_f
 vim.keymap.set('n', '<leader>tD', ':Telescope diagnostics<CR>')
 vim.keymap.set('n', '<leader>th', require('telescope').extensions.picker_list.picker_list)
 vim.keymap.set('n', '<leader>tk', ':Telescope keymaps<CR>')
-
-vim.keymap.set('n', '<leader>tt', function()
-  require('telescope').extensions.pomodori.timers()
-end, { desc = 'Manage Pomodori Timers'})
