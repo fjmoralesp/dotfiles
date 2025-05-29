@@ -47,14 +47,12 @@ use({
   'NeogitOrg/neogit',
   requires = {
     'nvim-lua/plenary.nvim',
-    'sindrets/diffview.nvim',
     'nvim-telescope/telescope.nvim',
   },
   config = function()
     require('neogit').setup({
       integrations = {
         telescope = true,
-        diffview = true,
       }
     })
     vim.keymap.set('n', '<A-2>', ':Neogit<CR>')
