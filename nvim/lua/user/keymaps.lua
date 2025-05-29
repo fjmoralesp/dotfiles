@@ -6,7 +6,7 @@ vim.keymap.set('v', '<', '<gv')
 vim.keymap.set('v', '>', '>gv')
 
 -- Paste replace visual selection without copying it.
-vim.keymap.set('v', 'p', '"_dP')
+vim.keymap.set('v', 'p', 'P')
 
 -- Move text up and down
 vim.keymap.set('i', '<A-j>', '<Esc>:move .+1<CR>==gi')
@@ -18,3 +18,13 @@ vim.keymap.set('v', '<A-k>', ":move '<-2<CR>gv=gv")
 
 -- Format Json
 vim.keymap.set('v', '<leader>j', ':%!jq .<CR>')
+
+-- Move to next or previous {char}
+vim.keymap.set('n', '](', '<cmd>normal! f(<CR>')
+vim.keymap.set('n', '[(', '<cmd>normal! F(<CR>')
+vim.keymap.set('n', '])', '<cmd>normal! f)<CR>')
+vim.keymap.set('n', '[)', '<cmd>normal! F)<CR>')
+vim.keymap.set('n', ']{', '<cmd>normal! f{<CR>')
+vim.keymap.set('n', '[{', '<cmd>normal! F{<CR>')
+vim.keymap.set('n', ']}', '<cmd>normal! f}<CR>')
+vim.keymap.set('n', '[}', '<cmd>normal! F}<CR>')
