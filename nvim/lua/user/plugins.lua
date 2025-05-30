@@ -342,27 +342,10 @@ use({
   requires = {
     'nvim-lua/plenary.nvim',
     'nvim-treesitter/nvim-treesitter',
+    'ravitemer/codecompanion-history.nvim',
   },
   config = function()
-    require('codecompanion').setup({
-      strategies = {
-        chat = {
-          adapter = {
-            name = 'anthropic',
-            model = 'claude-opus-4-20250514',
-          },
-        },
-        inline = {
-          adapter = {
-            name = 'anthropic',
-            model = 'claude-opus-4-20250514',
-          },
-        },
-      },
-    })
-    vim.keymap.set({ 'n', 'v' }, '<leader>aa', '<cmd>CodeCompanionActions<cr>', { noremap = true, silent = true })
-    vim.keymap.set({ 'n', 'v' }, '<leader>ac', '<cmd>CodeCompanionChat Toggle<cr>', { noremap = true, silent = true })
-    vim.keymap.set('v', '<leader>av', '<cmd>CodeCompanionChat Add<cr>', { noremap = true, silent = true })
+    require('user/plugins_opt/codecompanion')
   end
 })
 
