@@ -331,7 +331,8 @@ use({
       model = 'claude-3.7-sonnet', -- claude-sonnet-4
       context = 'buffers',
     })
-    vim.keymap.set('n', '<leader>c', ':CopilotChatToggle<CR>')
+    vim.keymap.set('n', '<leader>cc', ':CopilotChatToggle<CR>')
+    vim.keymap.set('n', '<leader>cm', ':CopilotChatModels<CR>')
   end
 })
 
@@ -343,11 +344,37 @@ use({
     'nvim-treesitter/nvim-treesitter',
   },
   config = function()
-    require('codecompanion').setup()
+    require('codecompanion').setup({
+      strategies = {
+        chat = {
+          adapter = {
+            name = 'anthropic',
+            model = 'claude-opus-4-20250514',
+          },
+        },
+        inline = {
+          adapter = {
+            name = 'anthropic',
+            model = 'claude-opus-4-20250514',
+          },
+        },
+      },
+    })
     vim.keymap.set({ 'n', 'v' }, '<leader>aa', '<cmd>CodeCompanionActions<cr>', { noremap = true, silent = true })
     vim.keymap.set({ 'n', 'v' }, '<leader>ac', '<cmd>CodeCompanionChat Toggle<cr>', { noremap = true, silent = true })
     vim.keymap.set('v', '<leader>av', '<cmd>CodeCompanionChat Add<cr>', { noremap = true, silent = true })
   end
+})
+
+use({
+  'MeanderingProgrammer/render-markdown.nvim',
+  after = { 'nvim-treesitter' },
+  requires = { 'nvim-tree/nvim-web-devicons', opt = true },
+  config = function()
+    require('render-markdown').setup({
+      file_types= { 'markdown', 'codecompanion', 'copilot-chat' },
+    })
+  end,
 })
 
 -- Completition
