@@ -335,28 +335,18 @@ use({
   end
 })
 
+-- IA
 use({
-  'yetone/avante.nvim',
+  'olimorris/codecompanion.nvim',
   requires = {
-    'nvim-treesitter/nvim-treesitter',
-    'stevearc/dressing.nvim',
     'nvim-lua/plenary.nvim',
-    'MunifTanjim/nui.nvim',
-    'MeanderingProgrammer/render-markdown.nvim',
-    'hrsh7th/nvim-cmp',
-    'nvim-tree/nvim-web-devicons' ,
-    'HakonHarnes/img-clip.nvim',
-    'zbirenbaum/copilot.lua',
-    'echasnovski/mini.pick',
-    'nvim-telescope/telescope.nvim',
-    'ibhagwan/fzf-lua',
+    'nvim-treesitter/nvim-treesitter',
   },
-  run = 'make',
   config = function()
-    require('render-markdown').setup({
-      file_types = { 'markdown', 'Avante' },
-    })
-    require('user/plugins_opt/avante')
+    require('codecompanion').setup()
+    vim.keymap.set({ 'n', 'v' }, '<leader>aa', '<cmd>CodeCompanionActions<cr>', { noremap = true, silent = true })
+    vim.keymap.set({ 'n', 'v' }, '<leader>ac', '<cmd>CodeCompanionChat Toggle<cr>', { noremap = true, silent = true })
+    vim.keymap.set('v', '<leader>av', '<cmd>CodeCompanionChat Add<cr>', { noremap = true, silent = true })
   end
 })
 
