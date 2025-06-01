@@ -65,11 +65,11 @@ use({
     require('openingh').setup()
 
     -- for repository page
-    vim.keymap.set('n', '<Leader>gr', ':OpenInGHRepo<CR>')
+    vim.keymap.set('n', '<leader>gr', ':OpenInGHRepo<CR>')
 
     -- for current file page
-    vim.keymap.set('n', '<Leader>gf', ':OpenInGHFile<CR>')
-    vim.keymap.set('v', '<Leader>gf', ':OpenInGHFileLines<CR>')
+    vim.keymap.set('n', '<leader>gf', ':OpenInGHFile<CR>')
+    vim.keymap.set('v', '<leader>gf', ':OpenInGHFileLines<CR>')
   end,
 })
 
@@ -83,7 +83,6 @@ use({
             enabled = true,
             style = 'nvchad'
           },
-          neotree = true,
           treesitter = true,
           rainbow_delimiters = true,
           gitsigns = true,
@@ -156,34 +155,16 @@ use({
   end,
 })
 
--- File tree sidebar
+-- File tree navigation
 use({
-  'nvim-neo-tree/neo-tree.nvim',
-  branch = 'v3.x',
-  requires = {
-    'nvim-lua/plenary.nvim',
-    'nvim-tree/nvim-web-devicons',
-    'MunifTanjim/nui.nvim',
-  },
+  'stevearc/oil.nvim',
   config = function()
-    require('neo-tree').setup({
-      close_if_last_window = true,
-      window = {
-        mappings = {
-          ['<C-b>'] = 'close_window',
-        }
-      },
-      filesystem = {
-        filtered_items = {
-          hide_dotfiles = false,
-          hide_gitignored = false,
-          hide_by_name = {
-            '.git',
-          },
-        },
-      },
+    require('oil').setup({
+      view_options = {
+        show_hidden = true,
+      }
     })
-    vim.keymap.set('n', '<C-b>', ':Neotree reveal<CR>')
+    vim.keymap.set('n', '<C-b>', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
   end,
 })
 
