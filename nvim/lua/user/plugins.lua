@@ -159,12 +159,17 @@ use({
 use({
   'stevearc/oil.nvim',
   config = function()
-    require('oil').setup({
-      view_options = {
-        show_hidden = true,
-      }
-    })
-    vim.keymap.set('n', '<C-b>', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
+    require('user/plugins_opt/oil')
+  end,
+})
+
+use({
+  'refractalize/oil-git-status.nvim',
+  after = {
+    'oil.nvim',
+  },
+  config = function()
+    require('oil-git-status').setup()
   end,
 })
 
