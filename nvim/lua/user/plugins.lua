@@ -77,31 +77,7 @@ use({
 use({
   'catppuccin/nvim',
   config = function()
-    require('catppuccin').setup({
-        color_overrides = {
-          latte = {
-            base = '#f0f0f0',
-          },
-        },
-        integrations = {
-          telescope = {
-            enabled = true,
-            style = 'nvchad'
-          },
-          treesitter = true,
-          treesitter_context = true,
-          rainbow_delimiters = true,
-          gitsigns = true,
-          mason = true,
-          neogit = true,
-          cmp = true,
-          dap = true,
-          render_markdown = true,
-          flash = true,
-        }
-      })
-    vim.cmd('colorscheme catppuccin-latte')
-    -- vim.cmd('colorscheme catppuccin-mocha')
+    require('user/plugins_opt/catppuccin')
   end,
 })
 
@@ -153,6 +129,9 @@ use({
     require('user/plugins_opt/telescope')
   end,
 })
+
+-- qfix list
+use({'kevinhwang91/nvim-bqf'})
 
 use({
   'AckslD/nvim-neoclip.lua',
@@ -263,8 +242,10 @@ use({
 -- Improved syntax highlighting
 use({
   'nvim-treesitter/nvim-treesitter',
+  branch = 'master',
   run = function()
-    require('nvim-treesitter.install').update({ with_sync = true })
+    local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+    ts_update()
   end,
   requires = {
     'nvim-treesitter/nvim-treesitter-textobjects',
