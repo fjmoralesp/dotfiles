@@ -74,10 +74,19 @@ use({
 })
 
 -- Theme and other visual plugins.
+-- use({
+--   'catppuccin/nvim',
+--   config = function()
+--     require('user/plugins_opt/catppuccin')
+--   end,
+-- })
+
 use({
-  'catppuccin/nvim',
+  'morhetz/gruvbox',
   config = function()
-    require('user/plugins_opt/catppuccin')
+    -- vim.cmd('set background=light')
+    vim.cmd('set background=dark')
+    vim.cmd.colorscheme('gruvbox')
   end,
 })
 
@@ -90,7 +99,8 @@ use({
   config = function()
     require('lualine').setup({
       options = {
-        theme = 'catppuccin-latte',
+        theme = 'gruvbox',
+        -- theme = 'catppuccin-latte',
         -- theme = 'catppuccin-mocha',
       },
       sections = {
