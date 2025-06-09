@@ -13,7 +13,8 @@ local root_files = {
 vim.lsp.config('kotlin_language_server', {
   filetypes = { 'kotlin' },
   root_markers = root_files,
-  cmd = { 'kotlin-language-server' },  init_options = {
+  cmd = { 'kotlin-language-server' },
+  init_options = {
     storagePath = os.getenv('HOME') .. '/.cache',
   },
 })
