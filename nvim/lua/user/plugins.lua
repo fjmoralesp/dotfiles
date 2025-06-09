@@ -74,13 +74,6 @@ use({
 })
 
 -- Theme and other visual plugins.
--- use({
---   'catppuccin/nvim',
---   config = function()
---     require('user/plugins_opt/catppuccin')
---   end,
--- })
-
 use({
   'sainnhe/gruvbox-material',
   requires = {
@@ -108,8 +101,6 @@ use({
     require('lualine').setup({
       options = {
         theme = 'gruvbox-material',
-        -- theme = 'catppuccin-latte',
-        -- theme = 'catppuccin-mocha',
       },
       sections = {
         lualine_c = {
