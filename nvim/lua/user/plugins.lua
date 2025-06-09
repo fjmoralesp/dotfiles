@@ -82,11 +82,19 @@ use({
 -- })
 
 use({
-  'morhetz/gruvbox',
+  'sainnhe/gruvbox-material',
+  requires = {
+    'sheerun/vim-polyglot',
+    'nvim-treesitter/nvim-treesitter',
+  },
   config = function()
     -- vim.cmd('set background=light')
     vim.cmd('set background=dark')
-    vim.cmd.colorscheme('gruvbox')
+    -- Set contrast.
+    -- This configuration option should be placed before `colorscheme gruvbox-material`.
+    -- Available values: 'hard', 'medium'(default), 'soft'
+    vim.g.gruvbox_material_background = 'hard'
+    vim.cmd.colorscheme('gruvbox-material')
   end,
 })
 
@@ -99,7 +107,7 @@ use({
   config = function()
     require('lualine').setup({
       options = {
-        theme = 'gruvbox',
+        theme = 'gruvbox-material',
         -- theme = 'catppuccin-latte',
         -- theme = 'catppuccin-mocha',
       },
