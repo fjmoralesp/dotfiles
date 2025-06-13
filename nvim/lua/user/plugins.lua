@@ -366,10 +366,9 @@ use({
 
 -- DAP
 use({
-  'rcarriga/nvim-dap-ui',
+  'mfussenegger/nvim-dap',
   requires = {
-    'mfussenegger/nvim-dap',
-    'nvim-neotest/nvim-nio',
+    'igorlfs/nvim-dap-view',
   },
   config = function()
     require('user/plugins_opt/dap')
