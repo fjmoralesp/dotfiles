@@ -133,6 +133,7 @@ use({
     { 'nvim-telescope/telescope-fzf-native.nvim', run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release' },
     'OliverChao/telescope-picker-list.nvim',
     'nvim-telescope/telescope-ui-select.nvim',
+    'piersolenski/telescope-import.nvim',
   },
   config = function()
     require('user/plugins_opt/telescope')
