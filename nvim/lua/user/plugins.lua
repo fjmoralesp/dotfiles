@@ -356,6 +356,13 @@ use({
 	end,
 })
 
+use({
+	"iamcco/markdown-preview.nvim",
+	run = function()
+		vim.fn["mkdp#util#install"]()
+	end,
+})
+
 -- Completition
 use({
 	"hrsh7th/nvim-cmp",
