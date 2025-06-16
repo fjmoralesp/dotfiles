@@ -352,6 +352,7 @@ use({
 	config = function()
 		require("render-markdown").setup({
 			file_types = { "markdown", "codecompanion", "copilot-chat" },
+			completions = { lsp = { enabled = true } },
 		})
 	end,
 })
