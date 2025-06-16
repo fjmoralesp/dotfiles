@@ -46,5 +46,6 @@ cmp.setup({
     { name = 'buffer' },
     { name = 'path' },
     { name = 'copilot' },
+    { name = 'render-markdown' },
   },
 })
