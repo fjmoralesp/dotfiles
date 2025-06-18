@@ -81,8 +81,8 @@ use({
 		"nvim-treesitter/nvim-treesitter",
 	},
 	config = function()
-		vim.cmd("set background=light")
-		-- vim.cmd('set background=dark')
+		-- vim.cmd("set background=light")
+		vim.cmd("set background=dark")
 		-- Set contrast.
 		-- This configuration option should be placed before `colorscheme gruvbox-material`.
 		-- Available values: 'hard', 'medium'(default), 'soft'
