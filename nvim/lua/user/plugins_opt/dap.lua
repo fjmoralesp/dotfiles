@@ -110,6 +110,16 @@ require("dap").configurations.typescriptreact = {
 	},
 }
 
+require("dap-view").setup({
+	winbar = {
+		sections = { "console", "watches", "scopes", "exceptions", "breakpoints", "threads", "repl" },
+		default_section = "scopes",
+	},
+	windows = {
+		position = "right",
+	},
+})
+
 -- Keymaps
 vim.keymap.set("n", "<A-8>", ":DapViewToggle<CR>")
 vim.keymap.set("n", "<A-9>", [[<cmd>lua require('dap').toggle_breakpoint()<CR>]])
