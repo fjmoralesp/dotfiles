@@ -14,3 +14,9 @@ ln -s $DOTFILES/kitty $HOME/.config/kitty
 ln -sf $DOTFILES/tmux/tmux.conf $HOME/.tmux.conf
 
 ln -sf $DOTFILES/starship/starship.toml $HOME/.config/starship.toml
+
+rm -rf $HOME/.claude/settings.json
+ln -s $DOTFILES/claude/settings.json $HOME/.claude/settings.json
+
+rm -rf $HOME/.claude/CLAUDE.md
+ln -s $DOTFILES/claude/CLAUDE.md $HOME/.claude/CLAUDE.md

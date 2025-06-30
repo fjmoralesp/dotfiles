@@ -306,6 +306,7 @@ use({
 		require("copilot").setup({
 			suggestion = { enabled = false },
 			panel = { enabled = false },
+			copilot_model = "claude-sonnet-4",
 		})
 	end,
 })
@@ -318,22 +319,6 @@ use({
 	end,
 })
 
-use({
-	"CopilotC-Nvim/CopilotChat.nvim",
-	requires = {
-		"zbirenbaum/copilot.lua",
-		"nvim-lua/plenary.nvim",
-	},
-	config = function()
-		require("CopilotChat").setup({
-			model = "claude-3.7-sonnet", -- claude-sonnet-4
-			context = "buffers",
-		})
-		vim.keymap.set("n", "<leader>cc", ":CopilotChatToggle<CR>")
-		vim.keymap.set("n", "<leader>cm", ":CopilotChatModels<CR>")
-	end,
-})
-
 -- IA
 use({
 	"olimorris/codecompanion.nvim",
@@ -341,8 +326,10 @@ use({
 		"nvim-lua/plenary.nvim",
 		"nvim-treesitter/nvim-treesitter",
 		"ravitemer/codecompanion-history.nvim",
+		"j-hui/fidget.nvim",
 	},
 	config = function()
+		require("user/plugins_opt/codecompanion-spinner"):init()
 		require("user/plugins_opt/codecompanion")
 	end,
 })
@@ -353,7 +340,7 @@ use({
 	requires = { "nvim-tree/nvim-web-devicons", opt = true },
 	config = function()
 		require("render-markdown").setup({
-			file_types = { "markdown", "codecompanion", "copilot-chat" },
+			file_types = { "markdown", "codecompanion" },
 			completions = { lsp = { enabled = true } },
 		})
 	end,
