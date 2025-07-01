@@ -415,18 +415,6 @@ use({
 	end,
 })
 
--- Linters
-use({
-	"zapling/mason-conform.nvim",
-	requires = {
-		"williamboman/mason.nvim",
-		"stevearc/conform.nvim",
-	},
-	config = function()
-		require("user/plugins_opt/lint")
-	end,
-})
-
 -- Automatically set up your configuration after cloning packer.nvim
 -- Put this at the end after all plugins
 if packer_bootstrap then
