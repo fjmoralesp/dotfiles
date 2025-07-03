@@ -3,7 +3,7 @@ local luasnip = require("luasnip")
 local lspkind = require("lspkind")
 
 local has_words_before = function()
-	if vim.bo.buftype == "prompt" then
+	if vim.api.nvim_buf_get_option(0, "buftype") == "prompt" then
 		return false
 	end
 	local line, col = unpack(vim.api.nvim_win_get_cursor(0))
