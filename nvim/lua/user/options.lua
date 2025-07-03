@@ -12,6 +12,8 @@ vim.opt.wildmode = 'longest:full,full'
 
 vim.opt.title = true
 
+vim.opt.fillchars:append({ eob = ' ' }) -- remove ~ from end of buffer
+
 vim.opt.termguicolors = true
 
 vim.opt.clipboard = 'unnamedplus' -- Use system clipboard
