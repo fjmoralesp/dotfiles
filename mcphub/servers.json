@@ -1,0 +1,16 @@
+{
+  "nativeMCPServers": [],
+  "mcpServers": {
+    "brave-search": {
+      "args": ["-y", "@modelcontextprotocol/server-brave-search"],
+      "command": "npx",
+      "env": {
+        "BRAVE_API_KEY": "${BRAVE_API_KEY}"
+      }
+    },
+    "github.com/upstash/context7-mcp": {
+      "command": "node",
+      "args": ["${HOME}/.mcphub/servers/context7-mcp/dist/index.js"]
+    }
+  }
+}

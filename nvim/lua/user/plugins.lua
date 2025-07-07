@@ -320,6 +320,19 @@ use({
 })
 
 -- IA
+-- AI addonds
+use({
+	"ravitemer/mcphub.nvim",
+	requires = {
+		"nvim-lua/plenary.nvim",
+	},
+	run = "npm install -g mcp-hub@latest",
+	config = function()
+		require("mcphub").setup()
+	end,
+})
+
+-- AI buffer
 use({
 	"olimorris/codecompanion.nvim",
 	requires = {
