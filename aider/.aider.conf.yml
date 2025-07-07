@@ -1,5 +1,4 @@
 openai-api-base: https://api.githubcopilot.com
-openai-api-key: "{{OPENAI_API_KEY}}"
 model: openai/claude-sonnet-4
 weak-model: openai/gpt-4o-mini
 show-model-warnings: false
