@@ -341,7 +341,7 @@ use({
 		vim.keymap.set(
 			"n",
 			"<leader>cb",
-			":AiderOpen --no-auto-commits --no-gitignore --dark-mode --pretty --stream --vim<CR>",
+			":AiderOpen --no-auto-commits --no-gitignore --dark-mode --pretty --stream --vim --chat-language English<CR>",
 			{ noremap = true, silent = true }
 		)
 	end,
