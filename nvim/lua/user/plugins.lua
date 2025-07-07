@@ -332,6 +332,13 @@ use({
 	end,
 })
 
+use({
+	"joshuavial/aider.nvim",
+	config = function()
+		require("aider").setup()
+	end,
+})
+
 -- AI buffer
 use({
 	"olimorris/codecompanion.nvim",
