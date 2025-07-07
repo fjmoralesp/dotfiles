@@ -335,8 +335,15 @@ use({
 use({
 	"joshuavial/aider.nvim",
 	config = function()
-		require("aider").setup()
-		vim.keymap.set("n", "<leader>cb", ":AiderOpen<CR>", { noremap = true, silent = true })
+		require("aider").setup({
+			default_bindings = false,
+		})
+		vim.keymap.set(
+			"n",
+			"<leader>cb",
+			":AiderOpen --no-auto-commits --no-gitignore --dark-mode --pretty --stream --vim<CR>",
+			{ noremap = true, silent = true }
+		)
 	end,
 })
 
