@@ -2,3 +2,9 @@ openai-api-base: https://api.githubcopilot.com
 model: openai/claude-sonnet-4
 weak-model: openai/gpt-4o-mini
 show-model-warnings: false
+auto-commits: false
+gitignore: false
+dark-mode: true
+pretty: true
+stream: true
+vim: true

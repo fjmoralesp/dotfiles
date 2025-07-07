@@ -336,6 +336,7 @@ use({
 	"joshuavial/aider.nvim",
 	config = function()
 		require("aider").setup()
+		vim.keymap.set("n", "<leader>cb", ":AiderOpen<CR>", { noremap = true, silent = true })
 	end,
 })
 
