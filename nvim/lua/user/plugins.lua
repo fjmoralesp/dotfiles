@@ -334,21 +334,6 @@ use({
 	end,
 })
 
-use({
-	"joshuavial/aider.nvim",
-	config = function()
-		require("aider").setup({
-			default_bindings = false,
-		})
-		vim.keymap.set(
-			"n",
-			"<leader>cb",
-			":AiderOpen --no-auto-commits --no-gitignore --dark-mode --pretty --stream --vim --chat-language English<CR>",
-			{ noremap = true, silent = true }
-		)
-	end,
-})
-
 -- AI buffer
 use({
 	"olimorris/codecompanion.nvim",
