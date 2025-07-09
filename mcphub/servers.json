@@ -1,19 +1,30 @@
 {
-  "nativeMCPServers": [],
   "mcpServers": {
     "brave-search": {
-      "args": ["-y", "@modelcontextprotocol/server-brave-search"],
       "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-brave-search"
+      ],
       "env": {
         "BRAVE_API_KEY": "${BRAVE_API_KEY}"
       }
     },
-    "github.com/upstash/context7-mcp": {
-      "command": "node",
-      "args": ["${HOME}/.mcphub/servers/context7-mcp/dist/index.js"]
-    },
     "vectorcode": {
+      "disabled": false,
+      "env": {
+        "VECTORCODE_DB_URL": "http://localhost:8000"
+      },
       "command": "vectorcode-mcp-server"
+    },
+    "github.com/upstash/context7-mcp": {
+      "args": [
+        "${HOME}/.mcphub/servers/context7-mcp/dist/index.js"
+      ],
+      "command": "node"
     }
-  }
+  },
+  "nativeMCPServers": [
+    
+  ]
 }
