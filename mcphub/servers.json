@@ -11,6 +11,9 @@
     "github.com/upstash/context7-mcp": {
       "command": "node",
       "args": ["${HOME}/.mcphub/servers/context7-mcp/dist/index.js"]
+    },
+    "vectorcode": {
+      "command": "vectorcode-mcp-server"
     }
   }
 }
