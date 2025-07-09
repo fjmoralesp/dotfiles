@@ -2,11 +2,11 @@ require("conform").setup({
 	formatters_by_ft = {
 		lua = { "stylua" },
 		python = { "isort", "black" },
-		javascript = { "eslint_d" },
-		javascriptreact = { "eslint_d" },
-		typescript = { "eslint_d" },
-		typescriptreact = { "eslint_d" },
-		vue = { "eslint_d" },
+		javascript = { "eslint_d", "prettier" },
+		javascriptreact = { "eslint_d", "prettier" },
+		typescript = { "eslint_d", "prettier" },
+		typescriptreact = { "eslint_d", "prettier" },
+		vue = { "eslint_d", "prettier" },
 		css = { "prettier" },
 		scss = { "prettier" },
 		less = { "prettier" },
@@ -28,3 +28,6 @@ require("conform").setup({
 })
 
 require("mason-conform").setup()
+
+-- Keymaps
+vim.keymap.set("n", "gl", [[<cmd>lua require("conform").format({ async = true })<CR>]])
