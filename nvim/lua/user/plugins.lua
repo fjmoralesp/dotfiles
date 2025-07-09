@@ -320,21 +320,7 @@ use({
 })
 
 -- IA
--- AI addonds
-use({
-	"ravitemer/mcphub.nvim",
-	requires = {
-		"nvim-lua/plenary.nvim",
-	},
-	run = "npm install -g mcp-hub@latest",
-	config = function()
-		require("mcphub").setup({
-			auto_approve = true,
-		})
-	end,
-})
-
--- AI buffer
+-- Companion
 use({
 	"olimorris/codecompanion.nvim",
 	requires = {
@@ -342,6 +328,7 @@ use({
 		"nvim-treesitter/nvim-treesitter",
 		"ravitemer/codecompanion-history.nvim",
 		"j-hui/fidget.nvim",
+		"ravitemer/mcphub.nvim",
 	},
 	config = function()
 		require("user/plugins_opt/codecompanion-spinner"):init()
@@ -349,6 +336,7 @@ use({
 	end,
 })
 
+-- Chat buffer veiw
 use({
 	"MeanderingProgrammer/render-markdown.nvim",
 	after = { "nvim-treesitter" },

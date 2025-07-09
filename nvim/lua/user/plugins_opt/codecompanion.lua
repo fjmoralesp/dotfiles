@@ -1,3 +1,7 @@
+require("mcphub").setup({
+	auto_approve = true,
+})
+
 require("codecompanion").setup({
 	display = {
 		chat = {
