@@ -16,12 +16,15 @@ services:
   server:
     image: chromadb/chroma:0.6.3
     volumes:
-      - chroma_data:/data
+      - chroma_data:/chroma/chroma
     ports:
       - "8000:8000"
     networks:
       - internal
     environment:
+      - IS_PERSISTENT=TRUE
+      - PERSIST_DIRECTORY=/chroma/chroma
+      - ANONYMIZED_TELEMETRY=${ANONYMIZED_TELEMETRY:-TRUE}
       - CHROMA_OPEN_TELEMETRY__ENDPOINT=http://otel-collector:4317/
       - CHROMA_OPEN_TELEMETRY__SERVICE_NAME=chroma
     depends_on:
