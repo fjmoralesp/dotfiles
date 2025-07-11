@@ -1,12 +1,16 @@
 {
   "mcpServers": {
     "vectorcode-mcp-server": {
+      "type": "stdio",
       "command": "vectorcode-mcp-server",
-      "args": []
+      "args": [],
+      "env": {}
     },
-    "github.com/upstash/context7-mcp": {
+    "context7": {
+      "type": "stdio",
+      "command": "node",
       "args": ["${HOME}/.mcphub/servers/context7-mcp/dist/index.js"],
-      "command": "node"
+      "env": {}
     }
   }
 }
