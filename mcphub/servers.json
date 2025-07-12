@@ -7,10 +7,6 @@
         "BRAVE_API_KEY": "${BRAVE_API_KEY}"
       }
     },
-    "vectorcode-mcp-server": {
-      "command": "vectorcode-mcp-server",
-      "args": []
-    },
     "github.com/upstash/context7-mcp": {
       "args": ["${HOME}/.mcphub/servers/context7-mcp/dist/index.js"],
       "command": "node"
@@ -18,4 +14,3 @@
   },
   "nativeMCPServers": []
 }
-

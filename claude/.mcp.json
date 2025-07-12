@@ -1,11 +1,5 @@
 {
   "mcpServers": {
-    "vectorcode-mcp-server": {
-      "type": "stdio",
-      "command": "vectorcode-mcp-server",
-      "args": [],
-      "env": {}
-    },
     "context7": {
       "type": "stdio",
       "command": "node",
