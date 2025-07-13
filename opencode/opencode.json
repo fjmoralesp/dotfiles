@@ -1,0 +1,17 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "theme": "gruvbox",
+  "model": "github-copilot/claude-sonnet-4",
+  "mcp": {
+    "localmcp": {
+      "type": "local",
+      "command": ["./opencode/start-context7.sh"],
+      "enabled": true,
+      "environment": {}
+    }
+  },
+  "keybinds": {
+    "messages_half_page_up": "ctrl+u",
+    "messages_half_page_down": "ctrl+d"
+  }
+}
