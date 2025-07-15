@@ -3,11 +3,10 @@
   "theme": "gruvbox",
   "model": "github-copilot/claude-sonnet-4",
   "mcp": {
-    "localmcp": {
+    "context7": {
       "type": "local",
-      "command": ["./opencode/start-context7.sh"],
-      "enabled": true,
-      "environment": {}
+      "command": ["npx", "-y", "@upstash/context7-mcp"],
+      "enabled": true
     }
   },
   "keybinds": {

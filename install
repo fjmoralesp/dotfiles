@@ -27,5 +27,5 @@ ln -s $DOTFILES/mcphub $HOME/.config/mcphub
 rm -rf $HOME/.config/opencode/opencode.json
 ln -s $DOTFILES/opencode/opencode.json $HOME/.config/opencode/opencode.json
 
-rm -rf $HOME/.config/opencode/start-context7.sh
-ln -s $DOTFILES/opencode/start-context7.sh $HOME/.config/opencode/start-context7.sh
+rm -rf $HOME/.config/opencode/AGENTS.md
+ln -s $DOTFILES/opencode/AGENTS.md $HOME/.config/opencode/AGENTS.md
