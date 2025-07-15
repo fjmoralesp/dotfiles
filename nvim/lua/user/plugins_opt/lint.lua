@@ -1,12 +1,6 @@
 require("conform").setup({
 	formatters_by_ft = {
 		lua = { "stylua" },
-		python = { "isort", "black" },
-		javascript = { "eslint_d", "prettier" },
-		javascriptreact = { "eslint_d", "prettier" },
-		typescript = { "eslint_d", "prettier" },
-		typescriptreact = { "eslint_d", "prettier" },
-		vue = { "eslint_d", "prettier" },
 		css = { "prettier" },
 		scss = { "prettier" },
 		less = { "prettier" },
@@ -17,8 +11,6 @@ require("conform").setup({
 		markdown = { "prettier" },
 		graphql = { "prettier" },
 		handlebars = { "prettier" },
-		kotlin = { "ktfmt" },
-		java = { "google-java-format" },
 		bash = { "beautysh" },
 	},
 	format_on_save = {
