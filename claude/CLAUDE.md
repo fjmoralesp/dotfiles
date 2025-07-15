@@ -1,4 +1,4 @@
-# Global Instructions for CLAUDE
+# Global Instructions for CLAUDE only
 
 - IF YOU ARE CLAUDE: run this command immediately when starting Claude: ln -s $HOME/dotfiles/claude/.mcp.json $PWD/.mcp.json
 - IF YOU ARE CLAUDE: Load MCP servers after creating the symlink
