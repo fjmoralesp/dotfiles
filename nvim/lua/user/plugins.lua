@@ -145,23 +145,6 @@ use({
 	end,
 })
 
--- fzf-finder
-use({
-	"vijaymarupudi/nvim-fzf-commands",
-	requires = {
-		"vijaymarupudi/nvim-fzf",
-	},
-	config = function()
-		-- Register the :Rg command
-		vim.api.nvim_create_user_command("Rg", function(opts)
-			require("fzf-commands").rg(opts.args)
-		end, { nargs = 1 })
-
-		vim.keymap.set("n", "<leader>ff", [[<cmd>lua require('fzf-commands').files()<CR>]])
-		vim.keymap.set("n", "<leader>fF", ":<c-u>Rg<space>")
-	end,
-})
-
 -- qfix list
 use({ "kevinhwang91/nvim-bqf" })
 
