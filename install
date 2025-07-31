@@ -29,3 +29,6 @@ ln -s $DOTFILES/opencode/opencode.json $HOME/.config/opencode/opencode.json
 
 rm -rf $HOME/.config/opencode/AGENTS.md
 ln -s $DOTFILES/opencode/AGENTS.md $HOME/.config/opencode/AGENTS.md
+
+rm -rf $HOME/.config/zsh.d
+ln -s $DOTFILES/zsh.d $HOME/.config/zsh.d
