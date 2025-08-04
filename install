@@ -5,9 +5,6 @@ DOTFILES=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)
 rm -rf $HOME/.config/nvim
 ln -s $DOTFILES/nvim $HOME/.config/nvim
 
-rm -rf $HOME/.config/rio
-ln -s $DOTFILES/rio $HOME/.config/rio
-
 rm -rf $HOME/.config/kitty
 ln -s $DOTFILES/kitty $HOME/.config/kitty
 
@@ -32,3 +29,6 @@ ln -s $DOTFILES/opencode/AGENTS.md $HOME/.config/opencode/AGENTS.md
 
 rm -rf $HOME/.config/zsh.d
 ln -s $DOTFILES/zsh.d $HOME/.config/zsh.d
+
+rm -rf $HOME/.config/agents
+ln -s $DOTFILES/agents $HOME/.config/agents

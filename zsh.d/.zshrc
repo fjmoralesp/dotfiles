@@ -35,8 +35,11 @@ alias gpl="git pull origin"
 alias gps="git push origin"
 alias gs="git status"
 
-# OpenCode
+# OpenCode alias
 alias oc="opencode"
+
+# Agent alias
+alias at="$HOME/agents/terminal.sh"
 
 # Environment variables
 BAT_THEME="gruvbox-dark"
