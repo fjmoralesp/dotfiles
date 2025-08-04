@@ -3,7 +3,7 @@
 # Agent to bring AI to the terminal
 # Currently only supports GitHub Copilot
 
-CLIENT_ID="Iv1.b507a09c87stfi87"
+CLIENT_ID="Iv1.b507a08c87ecfe98"
 DEVICE_CODE_URL="https://github.com/login/device/code"
 ACCESS_TOKEN_URL="https://github.com/login/oauth/access_token"
 COPILOT_API_KEY_URL="https://api.github.com/copilot_internal/v2/token"
@@ -70,7 +70,7 @@ authenticate() {
     echo "Starting GitHub Copilot authentication..."
     
     local device_response=$(get_device_code)
-    
+
     if [ $? -ne 0 ]; then
         echo "Error: Failed to get device code"
         exit 1
