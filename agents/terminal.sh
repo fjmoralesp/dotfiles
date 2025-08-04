@@ -185,10 +185,6 @@ case "$1" in
         authenticate
         exit 0
         ;;
-    "--prompt" | "-p")
-        shift
-        QUERY="$*"
-        ;;
     "--help" | "-h")
         echo "Usage:"
         echo "  $0 --auth                    - Authenticate with GitHub Copilot"
