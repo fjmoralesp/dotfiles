@@ -39,7 +39,7 @@ alias gs="git status"
 alias oc="opencode"
 
 # Agent alias
-alias at="$HOME/.agents/terminal.sh"
+alias at="$HOME/.config/agents/terminal.sh"
 
 # Environment variables
 BAT_THEME="gruvbox-dark"
