@@ -3,7 +3,7 @@
 # Agent to bring AI to the terminal
 # Currently only supports GitHub Copilot
 
-CLIENT_ID="Iv1.b507a08c87ecfe98"
+CLIENT_ID=""
 DEVICE_CODE_URL="https://github.com/login/device/code"
 ACCESS_TOKEN_URL="https://github.com/login/oauth/access_token"
 COPILOT_API_KEY_URL="https://api.github.com/copilot_internal/v2/token"
@@ -95,8 +95,13 @@ authenticate() {
     fi
     
     echo "Getting Copilot API token..."
+
+    echo "$github_token"
     
     local copilot_response=$(get_copilot_token "$github_token")
+
+    echo "$copilot_response"
+
     local copilot_token=$(echo "$copilot_response" | jq -r '.token')
     local expires_at=$(echo "$copilot_response" | jq -r '.expires_at')
     
