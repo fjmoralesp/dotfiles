@@ -1,5 +1,5 @@
 # Zsh History
-HISTFILE=/home/francisco/.zsh_history
+HISTFILE=$HOME/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
 setopt appendhistory
@@ -18,7 +18,6 @@ bindkey "$terminfo[kcbt]" reverse-menu-complete
 alias docker=podman
 alias docker-compose="podman-compose"
 alias ssh="TERM=xterm-256color ssh"
-alias open_vpn="sudo openvpn /home/francisco/client-config.ovpn"
 alias cat="bat --paging=never"
 alias fzf_preview="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}'"
 alias postman="$HOME/Postman/Postman"
