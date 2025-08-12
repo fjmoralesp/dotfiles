@@ -4,6 +4,7 @@
 # Currently only supports GitHub Copilot
 
 BASE_URL="https://openrouter.ai/api/v1/chat/completions"
+AGENT_EXPERT_INSTRUCTIONS="You are an AI agent that can answer questions and provide information. You are an expert in various domains, including programming, console command line tools and libraries, and general engineering topic knowledge. Your responses should be concise, accurate, and always suggesting next steps."
 
 query() {
     local query="$1"
@@ -15,6 +16,7 @@ query() {
         -d "{
             \"model\": \"openai/gpt-oss-20b:free\",
             \"messages\": [
+                {\"role\": \"system\", \"content\": \"$AGENT_EXPERT_INSTRUCTIONS\"},
                 {\"role\": \"user\", \"content\": \"$query\"}
             ],
         }" \
