@@ -14,19 +14,19 @@ require("codecompanion").setup({
 		chat = {
 			adapter = {
 				name = "copilot",
-				model = "grok-code-fast-1",
+				model = "claude-sonnet-4",
 			},
 		},
 		inline = {
 			adapter = {
 				name = "copilot",
-				model = "grok-code-fast-1",
+				model = "claude-sonnet-4",
 			},
 		},
 		cmd = {
 			adapter = {
 				name = "copilot",
-				model = "grok-code-fast-1",
+				model = "claude-sonnet-4",
 			},
 		},
 	},
