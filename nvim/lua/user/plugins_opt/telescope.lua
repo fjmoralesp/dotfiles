@@ -30,6 +30,7 @@ require("telescope").load_extension("live_grep_args")
 require("telescope").load_extension("fzf")
 require("telescope").load_extension("ui-select")
 require("telescope").load_extension("import")
+require("telescope").load_extension("project")
 
 -- picker_list must be the last one
 require("telescope").load_extension("picker_list")
@@ -41,3 +42,8 @@ vim.keymap.set("n", "<leader>tD", ":Telescope diagnostics<CR>")
 vim.keymap.set("n", "<leader>th", require("telescope").extensions.picker_list.picker_list)
 vim.keymap.set("n", "<leader>tk", ":Telescope keymaps<CR>")
 vim.keymap.set("n", "<leader>ti", ":Telescope import<CR>")
+vim.keymap.set(
+	"n",
+	"<leader>tp",
+	[[<cmd>lua require'telescope'.extensions.project.project{ display_type = 'full' }<CR>]]
+)

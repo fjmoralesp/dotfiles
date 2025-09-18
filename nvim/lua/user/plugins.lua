@@ -140,6 +140,7 @@ use({
 		"OliverChao/telescope-picker-list.nvim",
 		"nvim-telescope/telescope-ui-select.nvim",
 		"piersolenski/telescope-import.nvim",
+		"nvim-telescope/telescope-project.nvim",
 	},
 	config = function()
 		require("user/plugins_opt/telescope")
@@ -148,17 +149,6 @@ use({
 
 -- qfix list
 use({ "kevinhwang91/nvim-bqf" })
-
-use({
-	"AckslD/nvim-neoclip.lua",
-	requires = {
-		"nvim-telescope/telescope.nvim",
-	},
-	config = function()
-		require("neoclip").setup()
-		vim.keymap.set("n", "<leader>tp", ":Telescope neoclip<CR>")
-	end,
-})
 
 -- File tree navigation
 use({

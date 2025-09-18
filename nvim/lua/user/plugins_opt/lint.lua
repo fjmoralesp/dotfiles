@@ -11,8 +11,11 @@ require("conform").setup({
 		markdown = { "prettier" },
 		graphql = { "prettier" },
 		handlebars = { "prettier" },
-		kotlin = { "ktlint", "ktfmt" },
 		bash = { "beautysh" },
+	},
+	format_on_save = {
+		timeout_ms = 500,
+		lsp_format = "fallback",
 	},
 })
 
