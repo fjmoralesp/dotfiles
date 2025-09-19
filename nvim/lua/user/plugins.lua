@@ -139,8 +139,6 @@ use({
 		},
 		"OliverChao/telescope-picker-list.nvim",
 		"nvim-telescope/telescope-ui-select.nvim",
-		"piersolenski/telescope-import.nvim",
-		"nvim-telescope/telescope-project.nvim",
 	},
 	config = function()
 		require("user/plugins_opt/telescope")
@@ -166,6 +164,30 @@ use({
 	config = function()
 		require("oil-git-status").setup()
 	end,
+})
+
+-- Project management
+use({
+	"coffebar/neovim-project",
+	config = function()
+		vim.opt.sessionoptions:append("globals")
+		require("neovim-project").setup({
+			projects = {
+				"~/jobox/*",
+				"~/rush/*",
+				"~/dotfiles",
+			},
+			picker = {
+				type = "telescope",
+			},
+		})
+		vim.keymap.set("n", "<leader>tp", ":NeovimProjectDiscover history<CR>")
+	end,
+	requires = {
+		{ "nvim-lua/plenary.nvim" },
+		{ "nvim-telescope/telescope.nvim" },
+		{ "Shatur/neovim-session-manager" },
+	},
 })
 
 -- Last location when opening a file.
