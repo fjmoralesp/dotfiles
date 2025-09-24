@@ -175,6 +175,7 @@ use({
 			projects = {
 				"~/jobox/*",
 				"~/rush/*",
+				"~/rush/frontend/*",
 				"~/dotfiles",
 			},
 			picker = {
