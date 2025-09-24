@@ -166,31 +166,6 @@ use({
 	end,
 })
 
--- Project management
-use({
-	"coffebar/neovim-project",
-	config = function()
-		vim.opt.sessionoptions:append("globals")
-		require("neovim-project").setup({
-			projects = {
-				"~/jobox/*",
-				"~/rush/*",
-				"~/rush/frontend/*",
-				"~/dotfiles",
-			},
-			picker = {
-				type = "telescope",
-			},
-		})
-		vim.keymap.set("n", "<leader>tp", ":NeovimProjectDiscover history<CR>")
-	end,
-	requires = {
-		{ "nvim-lua/plenary.nvim" },
-		{ "nvim-telescope/telescope.nvim" },
-		{ "Shatur/neovim-session-manager" },
-	},
-})
-
 -- Last location when opening a file.
 use("farmergreg/vim-lastplace")
 
