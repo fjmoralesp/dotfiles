@@ -169,6 +169,14 @@ use({
 -- Last location when opening a file.
 use("farmergreg/vim-lastplace")
 
+-- Sessions
+use({
+	"rmagatti/auto-session",
+	config = function()
+		require("auto-session").setup()
+	end,
+})
+
 -- Commenting support.
 use("tpope/vim-commentary")
 
