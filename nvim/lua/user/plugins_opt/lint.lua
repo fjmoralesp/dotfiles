@@ -8,7 +8,7 @@ require("conform").setup({
 		json = { "prettier" },
 		jsonc = { "prettier" },
 		yaml = { "prettier" },
-		markdown = { "prettier" },
+		markdown = { "markdownlint" },
 		graphql = { "prettier" },
 		handlebars = { "prettier" },
 		bash = { "beautysh" },
