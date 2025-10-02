@@ -14,7 +14,7 @@ require("telescope").setup({
 				["<A-Up>"] = actions.cycle_history_prev,
 			},
 		},
-		file_ignore_patterns = { ".git/", "bin/", "dist/", "build/" },
+		file_ignore_patterns = { ".git/", "bin/", "dist/", "build/", "node_modules/" },
 	},
 	pickers = {
 		find_files = {
