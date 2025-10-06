@@ -44,6 +44,7 @@ alias oc="opencode"
 alias at="$HOME/.config/agents/terminal.sh"
 
 # Environment variables
+EDITOR="nvim" # OpenCode config
 BAT_THEME="gruvbox-dark"
 
 # Tmux
