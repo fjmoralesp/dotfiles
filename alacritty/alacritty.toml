@@ -1,15 +1,17 @@
-general.import = [ "~/.config/omarchy/current/theme/alacritty.toml" ]
+general.import = [
+  "./gruvbox_material_hard_dark.toml"
+]
 
 [env]
 TERM = "xterm-256color"
 
 [font]
-normal = { family = "FiraCode Nerd Font" }
-bold = { family = "FiraCode Nerd Font" }
-italic = { family = "FiraCode Nerd Font" }
-offset.y = 7
-glyph_offset.y = 3
-size = 11.25
+normal = { family = "JetBrainsMono Nerd Font" }
+bold = { family = "JetBrainsMono Nerd Font" }
+italic = { family = "JetBrainsMono Nerd Font" }
+offset.y = 10
+glyph_offset.y = 5
+size = 12
 
 [window]
 padding.x = 10

@@ -7,9 +7,9 @@
         "BRAVE_API_KEY": "${BRAVE_API_KEY}"
       }
     },
-    "github.com/upstash/context7-mcp": {
-      "args": ["${HOME}/.mcphub/servers/context7-mcp/dist/index.js"],
-      "command": "node"
+    "context7": {
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp"]
     }
   },
   "nativeMCPServers": []
