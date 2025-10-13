@@ -11,7 +11,7 @@ bold = { family = "JetBrainsMono Nerd Font" }
 italic = { family = "JetBrainsMono Nerd Font" }
 offset.y = 10
 glyph_offset.y = 5
-size = 12
+size = 11.25
 
 [window]
 padding.x = 10

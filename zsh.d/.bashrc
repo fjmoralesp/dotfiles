@@ -1,6 +1,4 @@
 # Tools alias
-alias docker=podman
-alias docker-compose="podman-compose"
 alias ssh="TERM=xterm-256color ssh"
 alias cat="bat --paging=never"
 alias fzf_preview="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}'"
