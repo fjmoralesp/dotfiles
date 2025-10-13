@@ -8,6 +8,9 @@ ln -s $DOTFILES/nvim $HOME/.config/nvim
 rm -rf $HOME/.config/kitty
 ln -s $DOTFILES/kitty $HOME/.config/kitty
 
+rm -rf $HOME/.config/alacritty
+ln -s $DOTFILES/alacritty $HOME/.config/alacritty
+
 ln -sf $DOTFILES/tmux/tmux.conf $HOME/.tmux.conf
 
 ln -sf $DOTFILES/starship/starship.toml $HOME/.config/starship.toml
