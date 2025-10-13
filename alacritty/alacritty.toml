@@ -1,0 +1,24 @@
+general.import = [
+  "./gruvbox_material_hard_dark.toml"
+]
+
+[env]
+TERM = "xterm-256color"
+
+[font]
+normal = { family = "JetBrainsMono Nerd Font" }
+bold = { family = "JetBrainsMono Nerd Font" }
+italic = { family = "JetBrainsMono Nerd Font" }
+offset.y = 10
+glyph_offset.y = 5
+size = 12
+
+[window]
+padding.x = 10
+padding.y = 10
+decorations = "None"
+
+[keyboard]
+bindings = [
+{ key = "F11", action = "ToggleFullscreen" }
+]

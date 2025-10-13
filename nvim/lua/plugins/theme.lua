@@ -1,0 +1,1 @@
+/home/francisco/.config/omarchy/current/theme/neovim.lua
