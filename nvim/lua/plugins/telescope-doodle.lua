@@ -16,15 +16,15 @@ return {
 
     -- Example keymaps for doodle's telescope pickers
     local keymap = vim.keymap.set
-    keymap("n", "<leader>dd", function()
+    keymap("n", "<leader>ddF", function()
       telescope.extensions.doodle.find_notes()
     end, { desc = "Doodle Find Notes" })
 
-    keymap("n", "<leader>ff", function()
+    keymap("n", "<leader>ddg", function()
       telescope.extensions.doodle.find_files()
     end, { desc = "Doodle Find Files" })
 
-    keymap("n", "<leader>dy", function()
+    keymap("n", "<leader>ddt", function()
       telescope.extensions.doodle.find_templates()
     end, { desc = "Doodle Find Templates" })
   end,
