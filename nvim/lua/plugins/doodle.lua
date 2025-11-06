@@ -15,21 +15,21 @@ return {
   end,
   keys = {
     {
-      "<leader>df",
+      "<leader>ddf",
       function()
         require("doodle"):toggle_finder()
       end,
       desc = "Doodle Finder",
     },
     {
-      "<leader>ds",
+      "<leader>dds",
       function()
         require("doodle"):sync()
       end,
       desc = "Doodle Sync",
     },
     {
-      "<leader>dl",
+      "<leader>ddl",
       function()
         require("doodle"):toggle_links()
       end,
