@@ -16,3 +16,21 @@ vim.keymap.set({ "n", "v" }, "<leader>ac", "<cmd>CodeCompanionChat Toggle<cr>", 
 
 -- Format Json
 vim.keymap.set("v", "<leader>j", ":%!jq .<CR>")
+
+-- Wiki Sync
+vim.keymap.set("n", "<leader>ws", function()
+  local snacks = require("snacks")
+  local wiki_path = vim.fn.expand("~/work/wiki")
+  local timestamp = os.date("%Y-%m-%d %H:%M:%S")
+  local commit_msg = "Update wiki: " .. timestamp
+
+  vim.fn.system(string.format("git -C %s add .", wiki_path))
+
+  vim.fn.system(string.format("git -C %s commit -m '%s'", wiki_path, commit_msg))
+
+  local push_result = vim.fn.system(string.format("git -C %s push origin main", wiki_path))
+
+  snacks.notifier.notify(push_result, "info", {
+    title = "Wiki sync",
+  })
+end, { desc = "Commit and push wiki changes" })
