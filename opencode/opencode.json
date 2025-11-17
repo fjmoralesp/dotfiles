@@ -1,6 +1,6 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "theme": "gruvbox",
+  "theme": "tokyonight",
   "model": "github-copilot/claude-sonnet-4.5",
   "mcp": {
     "context7": {

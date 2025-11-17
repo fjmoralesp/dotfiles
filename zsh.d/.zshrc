@@ -14,43 +14,8 @@ source $HOME/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 bindkey              '^I'         menu-complete
 bindkey "$terminfo[kcbt]" reverse-menu-complete
 
-# Tools alias
-alias docker=podman
-alias docker-compose="podman-compose"
-alias ssh="TERM=xterm-256color ssh"
-alias cat="bat --paging=never"
-alias fzf_preview="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}'"
-alias postman="$HOME/Postman/Postman"
-
-# Git alias
-alias ga="git add ."
-alias gb="git branch"
-alias gbc="git branch --show-current"
-alias gc="git commit -m"
-alias gca="git commit --amend"
-alias gch="git checkout"
-alias gd="git diff --name-only --relative --diff-filter=d -z | xargs --null bat --diff"
-alias gf="git fetch --prune"
-alias gl="git log"
-alias gm="git merge"
-alias gpl="git pull origin"
-alias gps="git push origin"
-alias gs="git status"
-
-# OpenCode alias
-alias oc="opencode"
-
-# Agent alias
-alias at="$HOME/.config/agents/terminal.sh"
-
-# Environment variables
-EDITOR="nvim" # OpenCode config
-BAT_THEME="gruvbox-dark"
-
-# Tmux
-if command -V tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-  exec tmux
-fi
+# Import bashrc
+$HOME/.config/zsh.d/.bashrc
 
 # Starship
 eval "$(starship init zsh)"
