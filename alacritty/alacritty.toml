@@ -1,4 +1,4 @@
-general.import = ["./tokyo-night-storm.toml"]
+general.import = ["./kanagawa.toml"]
 
 [env]
 TERM = "xterm-256color"

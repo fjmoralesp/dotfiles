@@ -15,7 +15,7 @@ bindkey              '^I'         menu-complete
 bindkey "$terminfo[kcbt]" reverse-menu-complete
 
 # Import bashrc
-$HOME/.config/zsh.d/.bashrc
+source $HOME/.config/zsh.d/.bashrc
 
 # Starship
 eval "$(starship init zsh)"
