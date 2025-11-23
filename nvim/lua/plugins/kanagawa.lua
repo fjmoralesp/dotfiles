@@ -4,7 +4,6 @@ return {
     priority = 1000,
     lazy = true,
     opts = {
-      compile = true,
       undercurl = true,
       functionStyle = { bold = true, italic = true },
       dimInactive = true,
