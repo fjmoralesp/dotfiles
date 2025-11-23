@@ -20,7 +20,7 @@ return {
       overrides = function(colors)
         local theme = colors.theme
         return {
-          WinSeparator = { fg = "none", bg = theme.ui.nontext },
+          WinSeparator = { fg = theme.ui.fg_dim, bg = theme.ui.bg },
         }
       end,
       theme = "wave",
