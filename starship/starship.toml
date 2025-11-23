@@ -1,14 +1,15 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 format = """
+[█](kanagawa_orange)\
 $os\
 $username\
-[](bg:kanagawa_yellow fg:kanagawa_orange)\
+[ ](bg:kanagawa_yellow fg:kanagawa_orange)\
 $directory\
-[](fg:kanagawa_yellow bg:kanagawa_aqua)\
+[ ](fg:kanagawa_yellow bg:kanagawa_aqua)\
 $git_branch\
 $git_status\
-[](fg:kanagawa_aqua bg:kanagawa_blue)\
+[ ](fg:kanagawa_aqua bg:kanagawa_blue)\
 $c\
 $cpp\
 $rust\
@@ -19,12 +20,13 @@ $java\
 $kotlin\
 $haskell\
 $python\
-[](fg:kanagawa_blue bg:kanagawa_bg3)\
+[ ](fg:kanagawa_blue bg:kanagawa_bg3)\
 $docker_context\
 $conda\
 $pixi\
-[](fg:kanagawa_bg3 bg:kanagawa_bg1)\
+[ ](fg:kanagawa_bg3 bg:kanagawa_bg1)\
 $time\
+[ ](fg:kanagawa_bg1)\
 $line_break$character"""
 
 palette = 'kanagawa'
