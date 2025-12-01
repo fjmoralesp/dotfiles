@@ -16,34 +16,11 @@ return {
     },
     strategies = {
       chat = {
-        adapter = {
-          name = "copilot",
-          model = "claude-sonnet-4.5",
-        },
-      },
-      inline = {
-        adapter = {
-          name = "copilot",
-          model = "claude-sonnet-4.5",
-        },
-      },
-      cmd = {
-        adapter = {
-          name = "copilot",
-          model = "claude-sonnet-4.5",
-        },
+        adapter = "opencode",
       },
     },
     extensions = {
       spinner = {},
-      mcphub = {
-        callback = "mcphub.extensions.codecompanion",
-        opts = {
-          show_result_in_chat = true, -- Show mcp tool results in chat
-          make_vars = true, -- Convert resources to #variables
-          make_slash_commands = true, -- Add prompts as /slash commands
-        },
-      },
       history = {
         enabled = true,
         opts = {
