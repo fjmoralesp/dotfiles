@@ -30,8 +30,8 @@ alias oc="opencode"
 alias at="$HOME/.config/agents/terminal.sh"
 
 # Environment variables
-EDITOR="nvim" # OpenCode config
-BAT_THEME="gruvbox-dark"
+export EDITOR="nvim" # OpenCode config
+export BAT_THEME="gruvbox-dark"
 
 # Tmux
 if command -V tmux &>/dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
