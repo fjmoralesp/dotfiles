@@ -1,8 +1,12 @@
 # Tools alias
 alias ssh="TERM=xterm-256color ssh"
 alias cat="bat --paging=never"
-alias fzf_preview="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}'"
 alias postman="$HOME/Postman/Postman"
+alias ls='eza -lh --group-directories-first --icons=auto'
+alias lsa='ls -a'
+alias lt='eza --tree --level=2 --long --icons --git'
+alias lta='lt -a'
+alias ff="fzf --preview 'bat --style=numbers --color=always {}'"
 
 # Git alias
 alias ga="git add ."
@@ -30,6 +34,6 @@ EDITOR="nvim" # OpenCode config
 BAT_THEME="gruvbox-dark"
 
 # Tmux
-if command -V tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+if command -V tmux &>/dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
   exec tmux
 fi
