@@ -35,5 +35,9 @@ export BAT_THEME="gruvbox-dark"
 
 # Tmux
 if command -V tmux &>/dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-  exec tmux
+  if [ -n "${TMUX_CUSTOM_CONFIG:-}" ] && [ -f "$TMUX_CUSTOM_CONFIG" ]; then
+    exec tmux -f "$TMUX_CUSTOM_CONFIG"
+  else
+    exec tmux
+  fi
 fi
