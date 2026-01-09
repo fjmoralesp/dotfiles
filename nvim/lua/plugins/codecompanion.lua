@@ -17,6 +17,7 @@ return {
     strategies = {
       chat = {
         adapter = "opencode",
+        model = "claude-sonnet-4.5",
       },
     },
     extensions = {

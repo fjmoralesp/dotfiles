@@ -17,6 +17,14 @@ vim.keymap.set({ "n", "v" }, "<leader>ac", "<cmd>CodeCompanionChat Toggle<cr>", 
 -- Format Json
 vim.keymap.set("v", "<leader>j", ":%!jq .<CR>")
 
+-- Avante Zen
+vim.keymap.set(
+  "n",
+  "<leader>az",
+  "<cmd>lua require('avante.api').zen_mode()<cr>",
+  { noremap = true, silent = true, desc = "Avante in Zen mode" }
+)
+
 -- Wiki Sync
 vim.keymap.set("n", "<leader>ws", function()
   local snacks = require("snacks")
