@@ -10,7 +10,9 @@ return {
       chat = {
         show_settings = true,
         window = {
-          width = 0.5,
+          buflisted = true,
+          sticky = true,
+          layout = "buffer",
         },
       },
     },

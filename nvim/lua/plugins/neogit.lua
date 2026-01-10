@@ -11,6 +11,6 @@ return {
         telescope = true,
       },
     })
-    vim.keymap.set("n", "<A-2>", ":Neogit<CR>")
+    vim.keymap.set("n", "<leader>gd", ":Neogit<CR>")
   end,
 }
