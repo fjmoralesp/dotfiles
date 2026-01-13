@@ -13,12 +13,6 @@ ln -sf $DOTFILES/tmux/tmux.win.conf $HOME/.tmux.win.conf
 
 ln -sf $DOTFILES/starship/starship.toml $HOME/.config/starship.toml
 
-rm -rf $HOME/.claude/settings.json
-ln -s $DOTFILES/claude/settings.json $HOME/.claude/settings.json
-
-rm -rf $HOME/.claude/CLAUDE.md
-ln -s $DOTFILES/claude/CLAUDE.md $HOME/.claude/CLAUDE.md
-
 rm -rf $HOME/.config/opencode/opencode.json
 ln -s $DOTFILES/opencode/opencode.json $HOME/.config/opencode/opencode.json
 
@@ -30,6 +24,3 @@ ln -s $DOTFILES/zsh.d $HOME/.config/zsh.d
 
 rm -rf $HOME/.config/agents
 ln -s $DOTFILES/agents $HOME/.config/agents
-
-# To delete:
-rm -rf $HOME/.config/mcphub
