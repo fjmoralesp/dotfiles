@@ -23,13 +23,4 @@ return {
       })
     end,
   },
-  {
-    "benomahony/oil-git.nvim",
-    after = "stevearc/oil.nvim",
-    opts = {
-      highlights = {
-        OilGitModified = { fg = "#fc9300" },
-      },
-    },
-  },
 }
