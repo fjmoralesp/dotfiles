@@ -17,6 +17,9 @@ return {
         view_options = {
           show_hidden = true,
         },
+        win_options = {
+          winbar = "%!v:lua.get_oil_winbar()",
+        },
         keymaps = {
           ["<leader>p"] = "actions.preview",
         },
