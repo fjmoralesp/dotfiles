@@ -17,18 +17,19 @@ return {
         view_options = {
           show_hidden = true,
         },
-        win_options = {
-          winbar = "%!v:lua.get_oil_winbar()",
-          signcolumn = "yes:2",
+        keymaps = {
+          ["<leader>p"] = "actions.preview",
         },
       })
     end,
   },
   {
-    "refractalize/oil-git-status.nvim",
-    after = { "oil.nvim" },
-    config = function()
-      require("oil-git-status").setup()
-    end,
+    "benomahony/oil-git.nvim",
+    after = "stevearc/oil.nvim",
+    opts = {
+      highlights = {
+        OilGitModified = { fg = "#fc9300" },
+      },
+    },
   },
 }
