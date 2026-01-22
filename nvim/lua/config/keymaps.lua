@@ -44,3 +44,19 @@ vim.keymap.set("n", "<leader>ws", function()
     title = "Wiki sync",
   })
 end, { desc = "Commit and push wiki changes" })
+
+-- Commit temporal current project changes
+vim.keymap.set("n", "<leader>gS", function()
+  local snacks = require("snacks")
+  local project_path = vim.fn.getcwd()
+  local timestamp = os.date("%Y-%m-%d %H:%M:%S")
+  local commit_msg = "Temp changes: " .. timestamp
+
+  vim.fn.system(string.format("git -C %s add .", project_path))
+
+  local commit_result = vim.fn.system(string.format("git -C %s commit -m '%s'", project_path, commit_msg))
+
+  snacks.notifier.notify(commit_result, "info", {
+    title = "Temporal commit done",
+  })
+end, { desc = "Commit temporal current project changes" })
