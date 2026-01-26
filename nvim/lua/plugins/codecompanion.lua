@@ -9,11 +9,6 @@ return {
     display = {
       chat = {
         show_settings = true,
-        window = {
-          buflisted = true,
-          sticky = true,
-          layout = "buffer",
-        },
       },
     },
     strategies = {
