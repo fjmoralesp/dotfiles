@@ -17,24 +17,5 @@
     "editor_open": "ctrl+e",
     "messages_half_page_up": "ctrl+u",
     "messages_half_page_down": "ctrl+d"
-  },
-  "agent": {
-    "code-reviewer": {
-      "description": "Reviews code for best practices and potential issues",
-      "prompt": "You are a code reviewer. Focus on security, performance, and maintainability.",
-      "tools": {
-        "write": false,
-        "edit": false
-      }
-    },
-    "test-writer": {
-      "description": "Specialized agent for writing comprehensive tests",
-      "prompt": "You are a test writing specialist. Write thorough, maintainable tests.",
-      "tools": {
-        "bash": true,
-        "read": true,
-        "write": true
-      }
-    }
   }
 }

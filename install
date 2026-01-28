@@ -19,8 +19,29 @@ ln -s $DOTFILES/opencode/opencode.json $HOME/.config/opencode/opencode.json
 rm -rf $HOME/.config/opencode/AGENTS.md
 ln -s $DOTFILES/opencode/AGENTS.md $HOME/.config/opencode/AGENTS.md
 
+rm -rf $HOME/.opencode/_lib
+ln -s $DOTFILES/.opencode/_lib $HOME/.opencode/_lib
+
+rm -rf $HOME/.opencode/agent
+ln -s $DOTFILES/.opencode/agent $HOME/.opencode/agent
+
+rm -rf $HOME/.opencode/command
+ln -s $DOTFILES/.opencode/command $HOME/.opencode/command
+
+rm -rf $HOME/.opencode/context
+ln -s $DOTFILES/.opencode/context $HOME/.opencode/context
+
+rm -rf $HOME/.opencode/plugin
+ln -s $DOTFILES/.opencode/plugin $HOME/.opencode/plugin
+
+rm -rf $HOME/.opencode/skill
+ln -s $DOTFILES/.opencode/skill $HOME/.opencode/skill
+
+rm -rf $HOME/.opencode/tool
+ln -s $DOTFILES/.opencode/tool $HOME/.opencode/tool
+
+rm -rf $HOME/.opencode/README.md
+ln -s $DOTFILES/.opencode/README.md $HOME/.opencode/README.md
+
 rm -rf $HOME/.config/zsh.d
 ln -s $DOTFILES/zsh.d $HOME/.config/zsh.d
-
-rm -rf $HOME/.config/agents
-ln -s $DOTFILES/agents $HOME/.config/agents
