@@ -10,20 +10,6 @@ vim.keymap.set("n", "<leader>gr", ":OpenInGHRepo<CR>")
 vim.keymap.set("n", "<leader>gf", ":OpenInGHFile<CR>")
 vim.keymap.set("v", "<leader>gf", ":OpenInGHFileLines<CR>")
 
--- Chat buffers
-vim.keymap.set(
-  { "n", "v" },
-  "<leader>ac",
-  "<cmd>CodeCompanionChat Toggle<cr>",
-  { noremap = true, silent = true, desc = "Codecompanion toggle" }
-)
-vim.keymap.set(
-  "n",
-  "<leader>aa",
-  "<cmd>lua require('avante.api').zen_mode()<cr>",
-  { noremap = true, silent = true, desc = "Avante toggle" }
-)
-
 -- Format Json
 vim.keymap.set("v", "<leader>j", ":%!jq .<CR>")
 

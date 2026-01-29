@@ -14,7 +14,7 @@ return {
     checkbox = {
       enabled = true,
     },
-    file_types = { "markdown", "Avante", "codecompanion" },
+    file_types = { "markdown" },
   },
-  ft = { "markdown", "Avante", "codecompanion" },
+  ft = { "markdown" },
 }
