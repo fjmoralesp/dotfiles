@@ -24,8 +24,12 @@ alias gpl="git pull origin"
 alias gps="git push origin"
 alias gs="git status"
 
-# OpenCode alias
-alias oc="opencode"
+# OpenCode / Copilot alias
+if command -v opencode >/dev/null 2>&1; then
+  alias oc="opencode"
+elif command -v copilot >/dev/null 2>&1; then
+  alias oc="copilot"
+fi
 
 # Agent alias
 alias at="$HOME/.config/agents/terminal.sh"

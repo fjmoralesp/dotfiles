@@ -2,9 +2,15 @@
 
 DOTFILES=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)
 
+############################
+# Nvim
+############################
 rm -rf $HOME/.config/nvim
 ln -s $DOTFILES/nvim $HOME/.config/nvim
 
+############################
+# Terminal
+############################
 rm -rf $HOME/.config/kitty
 ln -s $DOTFILES/kitty $HOME/.config/kitty
 
@@ -13,6 +19,12 @@ ln -sf $DOTFILES/tmux/tmux.win.conf $HOME/.tmux.win.conf
 
 ln -sf $DOTFILES/starship/starship.toml $HOME/.config/starship.toml
 
+rm -rf $HOME/.config/zsh.d
+ln -s $DOTFILES/zsh.d $HOME/.config/zsh.d
+
+############################
+# Opencode
+############################
 rm -rf $HOME/.config/opencode/opencode.json
 ln -s $DOTFILES/opencode/opencode.json $HOME/.config/opencode/opencode.json
 
@@ -43,5 +55,11 @@ ln -s $DOTFILES/.opencode/tool $HOME/.opencode/tool
 rm -rf $HOME/.opencode/README.md
 ln -s $DOTFILES/.opencode/README.md $HOME/.opencode/README.md
 
-rm -rf $HOME/.config/zsh.d
-ln -s $DOTFILES/zsh.d $HOME/.config/zsh.d
+############################
+# Copilot
+############################
+rm -rf $HOME/.copilot/mcp-config.json
+ln -s $DOTFILES/copilot/mcp-config.json $HOME/.copilot/mcp-config.json
+
+rm -rf $HOME/.copilot/copilot-instructions.md
+ln -s $DOTFILES/copilot/copilot-instructions.md $HOME/.copilot/copilot-instructions.md
