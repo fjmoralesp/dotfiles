@@ -8,7 +8,7 @@ alias lt='eza --tree --level=2 --long --icons --git'
 alias lta='lt -a'
 alias ff="fzf --preview 'bat --style=numbers --color=always {}'"
 alias csv="csvlens" # https://github.com/YS-L/csvlens
-alias sq="sqlit" # https://github.com/Maxteabag/sqlit
+alias sq="sqlit"    # https://github.com/Maxteabag/sqlit
 
 # Git alias
 alias ga="git add ."
@@ -25,13 +25,6 @@ alias gm="git merge"
 alias gpl="git pull origin"
 alias gps="git push origin"
 alias gs="git status"
-
-# OpenCode / Copilot alias
-if command -v opencode >/dev/null 2>&1; then
-  alias oc="opencode"
-elif command -v copilot >/dev/null 2>&1; then
-  alias oc="copilot"
-fi
 
 # Agent alias
 alias at="$HOME/.config/agents/terminal.sh"
