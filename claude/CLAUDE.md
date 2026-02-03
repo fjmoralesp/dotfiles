@@ -1,0 +1,9 @@
+# Global Instructions for CLAUDE only
+
+- IF YOU ARE CLAUDE: run this command immediately when starting Claude: [ ! -L .mcp.json ] && ln -s $HOME/dotfiles/claude/.mcp.json $PWD/.mcp.json || echo "Symlink already exists"
+- IF YOU ARE CLAUDE: ignore all the "Global Instructions for AGENTS.md"
+- IF YOU ARE CLAUDE: start the mcp servers
+- ALWAYS: look for updated documentation related to the libraries or frameworks in the Context7 mcp server
+- ALWAYS: Avoid adding comments in the code, they are useless and I don't like them
+- CRITICAL: NEVER create git commits or stage files unless the user EXPLICITLY asks you to "create a commit" or "commit this". You can make changes, run tests, but NEVER run `git commit` without explicit permission.
+- CRITICAL: NEVER change the code unless explicitly asked. If a change is not explicitly requested, always ask for confirmation before modifying the code.

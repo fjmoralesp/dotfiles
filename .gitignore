@@ -1,4 +1,8 @@
 .vectorcode/
 
-# Include .opencode directory (override global gitignore)
+# override global gitignore
 !.opencode/
+!claude/
+!.claude/
+!claude/**
+!.claude/**

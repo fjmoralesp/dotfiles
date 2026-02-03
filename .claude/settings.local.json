@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash([ ! -L .mcp.json ])",
+      "Bash(ln:*)",
+      "Bash(timeout 5 npx:*)",
+      "mcp__context7__resolve-library-id",
+      "mcp__context7__get-library-docs"
+    ]
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "context7"
+  ]
+}
