@@ -60,3 +60,9 @@ ln -s $DOTFILES/.opencode/README.md $HOME/.opencode/README.md
 ############################
 rm -rf $HOME/.claude/CLAUDE.md
 ln -s $DOTFILES/claude/CLAUDE.md $HOME/.claude/CLAUDE.md
+
+############################
+# Codex
+############################
+rm -rf $HOME/.codex/AGENTS.md
+ln -s $DOTFILES/.codex/AGENTS.md $HOME/.codex/AGENTS.md

@@ -4,5 +4,7 @@
 !.opencode/
 !claude/
 !.claude/
+!.codex/
 !claude/**
 !.claude/**
+!.codex/**
