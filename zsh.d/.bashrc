@@ -8,7 +8,7 @@ alias lt='eza --tree --level=2 --long --icons --git'
 alias lta='lt -a'
 alias ff="fzf --preview 'bat --style=numbers --color=always {}'"
 alias csv="csvlens" # https://github.com/YS-L/csvlens
-alias sq="sqlit"    # https://github.com/Maxteabag/sqlit
+alias sql="lazysql" # https://github.com/jorgerojas26/lazysql
 
 # Git alias
 alias ga="git add ."
