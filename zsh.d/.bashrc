@@ -6,8 +6,8 @@ alias lsa='ls -a'
 alias lt='eza --tree --level=2 --long --icons --git'
 alias lta='lt -a'
 alias ff="fzf --preview 'bat --style=numbers --color=always {}'"
-alias csv="csvlens" # https://github.com/YS-L/csvlens
-alias sql="lazysql" # https://github.com/jorgerojas26/lazysql
+alias csv="csvlens"                         # https://github.com/YS-L/csvlens
+alias sql="~/projects/lazysql/dist/lazysql" # https://github.com/jorgerojas26/lazysql
 alias nvim_prune="rm -rf ~/.local/share/nvim/* && rm -rf ~/.local/state/nvim/* && rm -rf ~/.cache/nvim/*"
 
 # Git alias
