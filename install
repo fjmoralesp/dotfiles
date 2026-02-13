@@ -23,6 +23,12 @@ rm -rf $HOME/.config/zsh.d
 ln -s $DOTFILES/zsh.d $HOME/.config/zsh.d
 
 ############################
+# Posting
+############################
+rm -rf $HOME/.config/posting/config.yaml
+ln -s $DOTFILES/posting/config.yaml $HOME/.config/posting/config.yaml
+
+############################
 # Opencode
 ############################
 rm -rf $HOME/.config/opencode/opencode.json
