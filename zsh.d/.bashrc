@@ -1,14 +1,14 @@
 # Tools alias
 alias ssh="TERM=xterm-256color ssh"
 alias cat="bat --paging=never"
-alias postman="$HOME/Postman/Postman"
 alias ls='eza -lh --group-directories-first --icons=auto'
 alias lsa='ls -a'
 alias lt='eza --tree --level=2 --long --icons --git'
 alias lta='lt -a'
 alias ff="fzf --preview 'bat --style=numbers --color=always {}'"
-alias csv="csvlens" # https://github.com/YS-L/csvlens
-alias sql="lazysql" # https://github.com/jorgerojas26/lazysql
+alias csv="csvlens"                         # https://github.com/YS-L/csvlens
+alias sql="~/projects/lazysql/dist/lazysql" # https://github.com/jorgerojas26/lazysql
+alias nvim_prune="rm -rf ~/.local/share/nvim/* && rm -rf ~/.local/state/nvim/* && rm -rf ~/.cache/nvim/*"
 
 # Git alias
 alias ga="git add ."
@@ -25,9 +25,6 @@ alias gm="git merge"
 alias gpl="git pull origin"
 alias gps="git push origin"
 alias gs="git status"
-
-# Agent alias
-alias at="$HOME/.config/agents/terminal.sh"
 
 # Environment variables
 export EDITOR="nvim" # OpenCode config
