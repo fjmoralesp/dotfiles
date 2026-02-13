@@ -66,3 +66,12 @@ ln -s $DOTFILES/.opencode/README.md $HOME/.opencode/README.md
 ############################
 rm -rf $HOME/.claude/CLAUDE.md
 ln -s $DOTFILES/claude/CLAUDE.md $HOME/.claude/CLAUDE.md
+
+############################
+# Copilot
+############################
+rm -rf $HOME/.copilot/copilot-instructions.md
+ln -s $DOTFILES/copilot/copilot-instructions.md $HOME/.copilot/copilot-instructions.md
+
+rm -rf $HOME/.copilot/mcp-config.json
+ln -s $DOTFILES/copilot/mcp-config.json $HOME/.copilot/mcp-config.json
